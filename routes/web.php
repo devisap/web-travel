@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\WelcomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'title'  => 'Sewa Mobil Termurah di Malang - Kenz Tranz'
+    ];
+    return view('depan.VHome', $data);
 });
+
+// Route::get('home', 'App\Http\Controllers\WelcomeController@VHome');
+Route::get('home', [WelcomeController::class, 'VHome']);
+Route::get('sewa-mobil', [WelcomeController::class, 'VSewaMobil']);
+Route::get('paket-wisata', [WelcomeController::class, 'VPaketWisata']);
+Route::get('tentang-kami', [WelcomeController::class, 'VTentangKami']);
+Route::get('kontak', [WelcomeController::class, 'VKontak']);

@@ -45,4 +45,12 @@ class WelcomeController extends Controller
         ];
         return view('depan.VKontak', $data);
     }
+
+    public function VArtikel()
+    {
+        $data = [
+        	'title'  => 'Artikel - Kenz Tranz'
+        ];
+        return view('depan.VArtikel', $data);
+    }
 }

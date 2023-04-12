@@ -26,3 +26,4 @@ Route::get('sewa-mobil', [WelcomeController::class, 'VSewaMobil']);
 Route::get('paket-wisata', [WelcomeController::class, 'VPaketWisata']);
 Route::get('tentang-kami', [WelcomeController::class, 'VTentangKami']);
 Route::get('kontak', [WelcomeController::class, 'VKontak']);
+Route::get('artikel', [WelcomeController::class, 'VArtikel']);

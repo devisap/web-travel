@@ -20,9 +20,7 @@
                                     data-hide-transition="left" data-show-duration="800" data-show-delay="400"
                                     data-hide-delay="400">
                                     <div class="main-slider__slogan">Ken'z Tranz for Effortless Journeys!</div>
-                                    <div class="main-slider__title">Sewa Mobil<br>
-                                        <h2>Premium Malang</h2>
-                                    </div>
+                                    <div class="main-slider__title">Sewa Mobil</div>
                                     <div class="text-center">
                                         <div class="main-slider__slogan_after">Kami menyewakan mobil premium <br> dan
                                             luxury car dengan harga sewa <br> mobil termurah <br> di Malang dan
@@ -50,12 +48,12 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 600.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/inova-reborn.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Inova Reborn</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -74,18 +72,18 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Inova Reborn* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 900.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/hiace.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Toyota Hiace</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -104,18 +102,18 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Hiace* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 850.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/elf-long.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Elf Long</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -134,7 +132,37 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Elf Long* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="fbox fbox-even">
+                                <span class="b-goods-f__label bg-green ">Rp 400.000</span>
+                                <div class="img-box">
+                                    <img class="w-100" src="{{ asset('media/image/avanza.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
+                                </div>
+                                <h4>Mobilio / Ertiga / Avanza</h4>
+                                <div class="fbox_info text-left">
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
+                                            Hari</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i><strong>Excelent
+                                            Service</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk BBM</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk Tol &
+                                        Parkir</p>
+                                </div>
+                                <div class="mt-4 text-left">
+                                    <p class="note">Note</p>
+                                    <p class="note">*Harga khusus untuk wilayah Malang & Batu</p>
+                                    <p class="note">*Tidak menerima <b>Lepas Kunci</b></p>
+                                </div>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a class="btn btn-primary mt-4 text-center"
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Mobilio / Ertiga / Avanza* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -181,10 +209,12 @@
                             <div class="card bg-green rounded">
                                 <div class="card-body text-center text-white">
                                     <h3 class="mt-5">Paket Wisata</h3>
-                                    <p class="mt-4 fs-20">Bagi Anda yang sedang mencari paket wisata dengan harga terjangkau dan pelayanan
+                                    <p class="mt-4 fs-20">Bagi Anda yang sedang mencari paket wisata dengan harga
+                                        terjangkau dan pelayanan
                                         berkualitas bisa melihat harga yang kami tawarkan.
                                     </p>
-                                    <a class="mt-4 btn btn-secondary" href="{{'paket-wisata'}}"><i class="fa-solid fa-right-to-bracket mr-2"></i>Paket Wisata</a>
+                                    <a class="mt-4 btn btn-secondary" href="{{ 'paket-wisata' }}"><i
+                                            class="fa-solid fa-right-to-bracket mr-2"></i>Paket Wisata</a>
                                 </div>
                             </div>
                         </div>

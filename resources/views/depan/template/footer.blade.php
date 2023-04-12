@@ -20,9 +20,9 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <section class="footer-section footer-section_link">
-                            <h3 class="footer-section__title">Navigasi Link</h3>
+                            <h3 class="footer-section__title">Navigasi</h3>
                             <ul class="footer-list list-unstyled">
                                 <li><a href="{{ 'sewa-mobil' }}">Sewa Mobil</a></li>
                                 <li><a href="{{ 'paket-wisata' }}">Paket Wisata</a></li>
@@ -31,17 +31,18 @@
                             </ul>
                         </section>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <section class="footer-section footer-section_subscribe">
                             <h3 class="footer-section__title">Info</h3>
                             <div class="footer-contacts">
-                                <div class="footer-contacts__item"><i class="ic icon-location-pin"></i>Perumahan
-                                    panorama garden blok S-45, Jamuran, Sukodadi, Kec. Wagir, Kabupaten Malang, Jawa
+                                <div class="footer-contacts__item"><i
+                                        class="fa-solid fa-location-dot mr-2"></i>Perumahan
+                                    panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa
                                     Timur 65158</div>
-                                <div class="footer-contacts__item"><i class="ic icon-envelope"></i><a
-                                        href="mailto:">support@kenz.com</a></div>
-                                <div class="footer-contacts__item"><i class="ic icon-earphones-alt"></i>Phone:
-                                    <a href="tel:+62">+62 821 xxxx xxxx</a>
+                                {{-- <div class="footer-contacts__item"><i class="fa-solid fa-envelope mr-2"></i><a
+                                        href="mailto:">support@kenz.com</a></div> --}}
+                                <div class="footer-contacts__item"><i class="fa-solid fa-phone mr-2"></i>Phone:
+                                    <a href="tel:">+62 821 3907 7771</a>
                                 </div>
                             </div>
                         </section>
@@ -50,8 +51,8 @@
             </div>
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15803.792572470484!2d112.5811679!3d-8.0042851!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788387be21a1a3%3A0x90d8a16ea5fb2b2b!2sKenz%20Tranz!5e0!3m2!1sid!2sid!4v1681145716462!5m2!1sid!2sid"
-                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15803.792572470484!2d112.5811679!3d-8.0042851!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788387be21a1a3%3A0x90d8a16ea5fb2b2b!2sKenz%20Tranz!5e0!3m2!1sid!2sid!4v1681188235385!5m2!1sid!2sid"
+                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>

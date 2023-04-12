@@ -1,5 +1,4 @@
 @include('depan.template.header')
-
 <body class="page">
     <!-- Loader-->
     <div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span></div>
@@ -44,7 +43,7 @@
                             <div class="b-find">
                                 <div class="b-find-content tab-content" id="findTabContent">
                                     <div class="tab-pane fade show active" id="content-allCar">
-                                        <div class="b-find__form text-center" style="font-size: 20px">
+                                        <div class="b-find__form text-center fs-20">
                                             <p>Ken'zTranz mempermudah Anda untuk keperluan transportasi. Melayani
                                                 sewa mobil luxury dan premium car dalam atau luar kota dengan berbagai
                                                 armada yang ada dengan kapasitas yang berbeda beda. Sewa mobil
@@ -198,12 +197,12 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 600.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/inova-reborn.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Inova Reborn</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -222,18 +221,18 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Inova Reborn* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 900.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/hiace.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Toyota Hiace</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -252,18 +251,18 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Hiace* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-4 col-lg-4">
                             <div class="fbox fbox-even">
-                                <span class="b-goods-f__label bg-green ">Rp 750.000</span>
+                                <span class="b-goods-f__label bg-green ">Rp 850.000</span>
                                 <div class="img-box">
-                                    <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}"
-                                        alt="">
+                                    <img class="w-100" src="{{ asset('media/image/elf-long.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Toyota Zenix Hybrid</h4>
+                                <h4>Elf Long</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -282,7 +281,37 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Zenix Hybrid* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Elf Long* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="fbox fbox-even">
+                                <span class="b-goods-f__label bg-green ">Rp 400.000</span>
+                                <div class="img-box">
+                                    <img class="w-100" src="{{ asset('media/image/avanza.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
+                                </div>
+                                <h4>Mobilio / Ertiga / Avanza</h4>
+                                <div class="fbox_info text-left">
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
+                                            Hari</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i><strong>Excelent
+                                            Service</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk BBM</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk Tol &
+                                        Parkir</p>
+                                </div>
+                                <div class="mt-4 text-left">
+                                    <p class="note">Note</p>
+                                    <p class="note">*Harga khusus untuk wilayah Malang & Batu</p>
+                                    <p class="note">*Tidak menerima <b>Lepas Kunci</b></p>
+                                </div>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a class="btn btn-primary mt-4 text-center"
+                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Mobilio / Ertiga / Avanza* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -437,57 +466,110 @@
             <section class="b-share section-default bg-grey" style="margin-top: -75px">
                 <div class="container">
                     <div class="row">
-                        <div class="col mt-4">
-                            <div class="card bg-white" style="width: 20rem;">
-                                <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}" alt="Card image cap">
-                                <div class="card-body mt-2">
-                                    <h5 class="card-title">Sewa Mobil Dinas Terpercaya</h5>
-                                    <div class="row">
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-user mr-2"></i>Admin</p>
-                                        </div>
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-calendar mr-2"></i>6 Januari 2023</p>
-                                        </div>
-                                    </div>
-                                    <p class="card-text">Kami menyediakan sewa mobil dinas untuk instansi yang ingin melakukan perjalanan dinas baik dalam kota maupun luar kota dengan pelayanan VVIP. Keberadaan mobil dinas… <a href="">Baca Selengkapnya</a></p>
+                        <div class="col-lg-4">
+                            <section class="b-post b-post-full clearfix">
+                                <div class="entry-media">
+                                    <a class="js-zoom-images" href="{{ asset('media/image/toyota-duo.JPG') }}">
+                                        <img class="img-fluid" src="{{ asset('media/image/toyota-duo.JPG') }}"
+                                            style="width: 100%; max-height: 300px;min-height: 300px" alt="Foto" />
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col mt-4">
-                            <div class="card bg-white" style="width: 20rem;">
-                                <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}" alt="Card image cap">
-                                <div class="card-body mt-2">
-                                    <h5 class="card-title">Sewa Mobil Dinas Terpercaya</h5>
-                                    <div class="row">
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-user mr-2"></i>Admin</p>
+                                <div class="entry-main">
+                                    <div class="entry-meta">
+                                        <div class="entry-date bg-primary">
+                                            <span class="entry-date__month">25</span>
+                                            <span class="entry-date__month">DEC</span>
+                                            <span class="entry-date__month">2023</span>
                                         </div>
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-calendar mr-2"></i>6 Januari 2023</p>
-                                        </div>
+                                        <span class="entry-meta__item"><a class="entry-meta__link"
+                                                href="{{ 'berita' }}"><i class="fa-regular fa-user mr-2"></i>by
+                                                Admin</a>
+                                        </span>
                                     </div>
-                                    <p class="card-text">Kami menyediakan sewa mobil dinas untuk instansi yang ingin melakukan perjalanan dinas baik dalam kota maupun luar kota dengan pelayanan VVIP. Keberadaan mobil dinas… <a href="">Baca Selengkapnya</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col mt-4">
-                            <div class="card bg-white" style="width: 20rem;">
-                                <img class="w-100" src="{{ asset('media/image/white-nobg.png') }}" alt="Card image cap">
-                                <div class="card-body mt-2">
-                                    <h5 class="card-title">Sewa Mobil Dinas Terpercaya</h5>
-                                    <div class="row">
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-user mr-2"></i>Admin</p>
-                                        </div>
-                                        <div class="col fs-8">
-                                            <p><i class="fa-solid fa-calendar mr-2"></i>6 Januari 2023</p>
-                                        </div>
+                                    <div class="entry-header">
+                                        <h3 class="entry-title">Sewa Mobil Dinas Terpercaya</h3>
                                     </div>
-                                    <p class="card-text">Kami menyediakan sewa mobil dinas untuk instansi yang ingin melakukan perjalanan dinas baik dalam kota maupun luar kota dengan pelayanan VVIP. Keberadaan mobil dinas… <a href="">Baca Selengkapnya</a></p>
+                                    <div class="entry-content">
+                                        <p>Kami menyediakan sewa mobil dinas untuk instansi yang ingin melakukan
+                                            perjalanan dinas baik dalam kota maupun luar kota dengan pelayanan VVIP.
+                                            Keberadaan mobil dinas bisa dikatakan sangat penting guna meningkatkan ....
+                                        </p>
+                                    </div>
+                                    <div class="entry-footer"> <a class="entry-link btn btn-default btn-sm"
+                                            href="{{'artikel'}}">Baca Selengkapnya</a> </div>
                                 </div>
-                            </div>
+                            </section>
                         </div>
+                        <div class="col-lg-4">
+                            <section class="b-post b-post-full clearfix">
+                                <div class="entry-media">
+                                    <a class="js-zoom-images" href="{{ asset('media/image/white-nobg.png') }}">
+                                        <img class="img-fluid" src="{{ asset('media/image/white-nobg.png') }}"
+                                            style="width: 100%; max-height: 300px;min-height: 300px" alt="Foto" />
+                                    </a>
+                                </div>
+                                <div class="entry-main">
+                                    <div class="entry-meta">
+                                        <div class="entry-date bg-primary">
+                                            <span class="entry-date__month">25</span>
+                                            <span class="entry-date__month">DEC</span>
+                                            <span class="entry-date__month">2023</span>
+                                        </div>
+                                        <span class="entry-meta__item"><a class="entry-meta__link"
+                                                href="{{ 'berita' }}"><i class="fa-regular fa-user"></i>by
+                                                Admin</a>
+                                        </span>
+                                    </div>
+                                    <div class="entry-header">
+                                        <h3 class="entry-title">Sewa Mobil Premium untuk Liburan Bersama Pasangan dan
+                                            Keluarga</h3>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>Liburan bersama pasangan dan keluarga lebih praktis dan nyaman menggunakan
+                                            mobil. Bepergian ke mana pun bisa lebih bebas, terlebih bila Anda sewa mobil
+                                            premium beserta supirnya. Anda pun bisa menikmati ....
+                                        </p>
+                                    </div>
+                                    <div class="entry-footer"> <a class="entry-link btn btn-default btn-sm"
+                                            href="{{'artikel'}}">Baca Selengkapnya</a> </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-4">
+                            <section class="b-post b-post-full clearfix">
+                                <div class="entry-media">
+                                    <a class="js-zoom-images" href="{{ asset('media/image/IMG_6623.webp') }}">
+                                        <img class="img-fluid" src="{{ asset('media/image/IMG_6623.webp') }}"
+                                            style="width: 100%; max-height: 300px;min-height: 300px" alt="Foto" />
+                                    </a>
+                                </div>
+                                <div class="entry-main">
+                                    <div class="entry-meta">
+                                        <div class="entry-date bg-primary">
+                                            <span class="entry-date__month">25</span>
+                                            <span class="entry-date__month">DEC</span>
+                                            <span class="entry-date__month">2023</span>
+                                        </div>
+                                        <span class="entry-meta__item"><a class="entry-meta__link"
+                                                href="{{ 'berita' }}"><i class="fa-regular fa-user"></i>by
+                                                Admin</a>
+                                        </span>
+                                    </div>
+                                    <div class="entry-header">
+                                        <h3 class="entry-title">Biaya Sewa Mobil di Malang</h3>
+                                    </div>
+                                    <div class="entry-content">
+                                        <p>Biaya sewa mobil di Malang bervariasi tergantung pada jenis mobil yang ingin
+                                            disewa, lama waktu sewa, dan juga fasilitas yang disediakan oleh perusahaan
+                                            penyewaan mobil ....
+                                        </p>
+                                    </div>
+                                    <div class="entry-footer"> <a class="entry-link btn btn-default btn-sm"
+                                            href="{{'artikel'}}">Baca Selengkapnya</a> </div>
+                                </div>
+                            </section>
+                        </div>
+
                     </div>
                 </div>
             </section>

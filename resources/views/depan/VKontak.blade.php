@@ -42,10 +42,35 @@
             <section class="b-featured section-default bg-grey mb-5">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15803.792572470484!2d112.5811679!3d-8.0042851!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788387be21a1a3%3A0x90d8a16ea5fb2b2b!2sKenz%20Tranz!5e0!3m2!1sid!2sid!4v1681232527123!5m2!1sid!2sid" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15803.792572470484!2d112.5811679!3d-8.0042851!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788387be21a1a3%3A0x90d8a16ea5fb2b2b!2sKenz%20Tranz!5e0!3m2!1sid!2sid!4v1681232527123!5m2!1sid!2sid"
+                            width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
             </section>
             @include('depan/template/footer')
         </div>
     </div>
+    <div id="example"></div>
 </body>
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>

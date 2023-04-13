@@ -93,3 +93,27 @@
 <script src="{{ asset('plugins/slick/slick.js') }}"></script>
 <!-- User customization-->
 <script src="{{ asset('js/custom.js') }}"></script>
+
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [
+            {
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage:
+            "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>

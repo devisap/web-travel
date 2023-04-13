@@ -99,7 +99,7 @@
                             <p class="text-justify fs-18">
                                 Dengan harga paket wisata Rp. 350.000 / Orang Untuk Tata Cara Pemesanan anda dapat
                                 menghubungi nomor yang tertera atau melakukan pemesanan dengan cara klik <a
-                                    href="{{'paket-wisata'}}">“PESAN
+                                    href="{{ 'paket-wisata' }}">“PESAN
                                     SEKARANG”</a> pada halaman Paket Wisata. Bagi anda yang ingin melakukan wisata
                                 selain Bromo
                                 juga dapat memilih paket hemat kami lainnya di halaman Paket Wisata.
@@ -115,4 +115,26 @@
             @include('depan/template/footer')
         </div>
     </div>
+    <div id="example"></div>
 </body>
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>

@@ -1,4 +1,5 @@
 @include('depan.template.header')
+
 <body class="page">
     <!-- Loader-->
     <div id="page-preloader"><span class="spinner border-t_second_b border-t_prim_a"></span></div>
@@ -47,7 +48,7 @@
                             <div class="centered box2">Bromo Midnight </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Bromo Midnight 1 Day Atas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Bromo Midnight 1 Day Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -56,7 +57,7 @@
                             <div class="centered box2 text-center">Kawah Ijen </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Kawah Ijen 1 Day Atas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Kawah Ijen 1 Day Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -78,7 +79,7 @@
                             <div class="centered box2">Batu + Bromo </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Batu + Bromo 2 hari 1 malamAtas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Batu + Bromo 2 hari 1 malam Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -87,7 +88,7 @@
                             <div class="centered box2 text-center">Bromo + Madakaripura </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Bromo + Madakaripura 2 hari 1 malamAtas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Bromo + Madakaripura 2 hari 1 malam Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -96,7 +97,7 @@
                             <div class="centered box2 text-center">Kawah Ijen + Baluran </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Kawah Ijen + Baluran 2 hari 1 malamAtas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Kawah Ijen + Baluran 2 hari 1 malam Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -114,20 +115,22 @@
                     </div>
                     <div class="row">
                         <div class="col-6">
-                            <img src="{{ asset('media/image/jodipan.jpg') }}" class="img myimage imgdiv" style="max-width: 500px; min-width: 500px;">
+                            <img src="{{ asset('media/image/jodipan.jpg') }}" class="img myimage imgdiv"
+                                style="max-width: 500px; min-width: 500px;">
                             <div class="centered box2">Malang + Batu + Bromo </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Malang + Batu + Bromo 3 hari 2 malamAtas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Malang + Batu + Bromo 3 hari 2 malam Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
                         <div class="col-6">
-                            <img src="{{ asset('media/image/baluran.jpg') }}" class="img myimage imgdiv" style="max-width: 500px; min-width: 500px;">
+                            <img src="{{ asset('media/image/baluran.jpg') }}" class="img myimage imgdiv"
+                                style="max-width: 500px; min-width: 500px;">
                             <div class="centered box2 text-center">Bromo + Kawah Ijen + Baluran </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat dengan paket wisata Bromo + Kawah Ijen + Baluran 3 hari 2 malamAtas nama: Tanggal berangkat: Bulan:">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat dengan paket wisata Bromo + Kawah Ijen + Baluran 3 hari 2 malam Atas nama: Tanggal berangkat: Bulan:">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -137,4 +140,26 @@
             @include('depan/template/footer')
         </div>
     </div>
+    <div id="example"></div>
 </body>
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>

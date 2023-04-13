@@ -20,7 +20,7 @@
                     </ul>
                 </nav>
                 <a class="vender-link"
-                href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkinAnda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil2. Transportasi VIP3. Perjalanan Dinas4. Acara Keluarga5. Pelayanan Tour Wisata6. Pernikahan7. Dan lain sebagainyaKami menyediakan armada terbaru yang bersih dan wangi. Untuk info lebih detail bisa akses website official kami : *https://kenztranz.com/*">
+                href="https://api.whatsapp.com/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.">
                 Pesan Sekarang
                 </a>
             </div>

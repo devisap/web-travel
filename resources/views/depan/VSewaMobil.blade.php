@@ -72,7 +72,7 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Inova Reborn* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Inova Reborn* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Toyota Hiace* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Toyota Hiace* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Elf Long* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Elf Long* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
                                     <img class="w-100" src="{{ asset('media/image/avanza.png') }}"
                                         style="width: 100%; max-height: 250px;min-height: 250px" alt="">
                                 </div>
-                                <h4>Mobilio / Ertiga / Avanza</h4>
+                                <h4>Mobilio</h4>
                                 <div class="fbox_info text-left">
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
                                     <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
@@ -162,7 +162,67 @@
                             </div>
                             <div class="text-center mb-4">
                                 <a class="btn btn-primary mt-4 text-center"
-                                    href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Saya berminat sewa *Mobilio / Ertiga / Avanza* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Mobilio* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="fbox fbox-even">
+                                <span class="b-goods-f__label bg-green ">Rp 400.000</span>
+                                <div class="img-box">
+                                    <img class="w-100" src="{{ asset('media/image/avanza.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
+                                </div>
+                                <h4>Ertiga</h4>
+                                <div class="fbox_info text-left">
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
+                                            Hari</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i><strong>Excelent
+                                            Service</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk BBM</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk Tol &
+                                        Parkir</p>
+                                </div>
+                                <div class="mt-4 text-left">
+                                    <p class="note">Note</p>
+                                    <p class="note">*Harga khusus untuk wilayah Malang & Batu</p>
+                                    <p class="note">*Tidak menerima <b>Lepas Kunci</b></p>
+                                </div>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a class="btn btn-primary mt-4 text-center"
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Ertiga* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4">
+                            <div class="fbox fbox-even">
+                                <span class="b-goods-f__label bg-green ">Rp 400.000</span>
+                                <div class="img-box">
+                                    <img class="w-100" src="{{ asset('media/image/avanza.png') }}"
+                                        style="width: 100%; max-height: 250px;min-height: 250px" alt="">
+                                </div>
+                                <h4>Avanza</h4>
+                                <div class="fbox_info text-left">
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Include Mobil & Driver</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga <strong>per
+                                            Hari</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i><strong>Excelent
+                                            Service</strong></p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk BBM</p>
+                                    <p class="mb-5px"><i class="fa-solid fa-xmark mr-2"></i>Tidak termasuk Tol &
+                                        Parkir</p>
+                                </div>
+                                <div class="mt-4 text-left">
+                                    <p class="note">Note</p>
+                                    <p class="note">*Harga khusus untuk wilayah Malang & Batu</p>
+                                    <p class="note">*Tidak menerima <b>Lepas Kunci</b></p>
+                                </div>
+                            </div>
+                            <div class="text-center mb-4">
+                                <a class="btn btn-primary mt-4 text-center"
+                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Saya berminat sewa *Avanza* Atas nama: Tanggal pemakaian: Bulan: Durasi Sewa :">
                                     <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                             </div>
                         </div>
@@ -187,7 +247,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <a class="btn my-auto btn-primary mt-5 text-center btn-lg"
-                                                        href="https://api.whatsapp.com/send?phone=6285732694267&text=https://api.whatsapp.com/send?phone=6282131554720&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkinAnda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil2. Transportasi VIP3. Perjalanan Dinas4. Acara Keluarga5. Pelayanan Tour Wisata6. Pernikahan7. Dan lain sebagainyaKami menyediakan armada terbaru yang bersih dan wangi. Untuk info lebih detail bisa akses website official kami : *https://kenztranz.com/*">
+                                                        href="https://api.whatsapp.com/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.">
                                                         <i class="fa-brands fa-whatsapp mr-2"></i>Pesan Sekarang</a>
                                                 </div>
                                             </div>
@@ -224,4 +284,26 @@
             @include('depan/template/footer')
         </div>
     </div>
+    <div id="example"></div>
 </body>
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi dan Pemesanan",
+                image: "media/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>

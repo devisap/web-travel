@@ -43,10 +43,9 @@
                                     </div> --}}
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table class="table table-bordered text-nowrap border-bottom w-100"
-                                                id="responsive-datatable">
+                                            <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                                                 <thead>
-                                                    <tr>
+                                                    <tr class="text-center">
                                                         <th class="wd-15p border-bottom-0">No</th>
                                                         <th class="wd-15p border-bottom-0">Nama Mobil</th>
                                                         <th class="wd-20p border-bottom-0">Harga</th>
@@ -61,11 +60,11 @@
                                                         <td>Rp. 600.000</td>
                                                         <td>Include Mobil & Driver</td>
                                                         <td>
-                                                            <a href="#" class="btn btn-icon btn-primary me-2" data-bs-target="#mdl_detail" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Detail Harga Sewa Mobil !" data-bs-original-title="Detail">
+                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2" data-bs-target="#mdl_detail" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Detail Harga Sewa Mobil !" data-bs-original-title="Detail">
                                                             <i class="fe fe-info"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-warning me-2" data-bs-target="#mdl_edit" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil" data-bs-original-title="Edit">
+                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2" data-bs-target="#mdl_edit" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil" data-bs-original-title="Edit">
                                                             <i class="fe fe-edit"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-danger me-2" data-bs-target="#mdl_delete" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Hapus Harga Sewa Mobil" data-bs-original-title="Hapus">
+                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2" data-bs-target="#mdl_delete" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Hapus Harga Sewa Mobil" data-bs-original-title="Hapus">
                                                             <i class="fe fe-trash"></i></a>
                                                     </td>
                                                     </tr>

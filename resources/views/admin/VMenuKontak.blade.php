@@ -39,10 +39,9 @@
                                     </div> --}}
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table class="table table-bordered text-nowrap border-bottom w-100"
-                                                id="responsive-datatable">
+                                            <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                                                 <thead>
-                                                    <tr>
+                                                    <tr >
                                                         <th class="wd-15p border-bottom-0">Alamat</th>
                                                         <th class="wd-20p border-bottom-0">Nomor Handphone</th>
                                                         <th class="wd-15p border-bottom-0">Waktu Buka</th>

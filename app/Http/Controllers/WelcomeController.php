@@ -53,4 +53,58 @@ class WelcomeController extends Controller
         ];
         return view('depan.VArtikel', $data);
     }
+
+    //admin
+    public function VMenuSewaMobil()
+    {
+        $data = [
+        	'title'  => 'Menu Harga Sewa Mobil Premium - Kenz Tranz'
+        ];
+        return view('admin.VMenuSewaMobil', $data);
+    }
+    public function VMenuKontak()
+    {
+        $data = [
+        	'title'  => 'Menu Kontak - Kenz Tranz'
+        ];
+        return view('admin.VMenuKontak', $data);
+    }
+    public function VMenuTentangKami()
+    {
+        $data = [
+        	'title'  => 'Menu Tentang Kami - Kenz Tranz'
+        ];
+        return view('admin.VMenuTentangKami', $data);
+    }
+    public function VMenuHome()
+    {
+        $data = [
+        	'title'  => 'Menu Home / Landing Page - Kenz Tranz'
+        ];
+        return view('admin.VMenuHome', $data);
+    }
+    public function VMenuArtikel()
+    {
+        $data = [
+        	'title'  => 'Menu Artikel - Kenz Tranz'
+        ];
+        return view('admin.VMenuArtikel', $data);
+    }
+    public function VMenuPaketWisata()
+    {
+        $data = [
+        	'title'  => 'Menu Paket Wisata - Kenz Tranz'
+        ];
+        return view('admin.VMenuPaketWisata
+        ', $data);
+    }
+    public function VLogin()
+    {
+        $data = [
+        	'title'  => 'Login - Kenz Tranz'
+        ];
+        return view('admin.VLogin
+        ', $data);
+    }
+
 }

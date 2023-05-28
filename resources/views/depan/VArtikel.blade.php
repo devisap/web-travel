@@ -138,7 +138,7 @@
                                         </ul>
                                     </div>
                                 </article>
-                                <section class="section-reply-form" id="section-reply-form">
+                                {{-- <section class="section-reply-form" id="section-reply-form">
                                     <h2 class="ui-title-inner">Leave a<span class="text-primary"> Comment</span></h2>
                                     <form class="form-reply ui-form" action="#" method="post">
                                         <div class="row">
@@ -163,7 +163,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                </section>
+                                </section> --}}
                                 <!-- end .section-reply-form-->
                             </main>
                         </div>

@@ -27,7 +27,7 @@
                                             sekitarnya
                                         </div>
                                     </div>
-                                    <a class=" btn btn-primary" href="">Lihat Harga Sewa</a>
+                                    <a class=" btn btn-primary" href="{{'sewa-mobil'}}">Lihat Harga Sewa</a>
                                 </div>
                             </div>
                         </div>

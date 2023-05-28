@@ -9,24 +9,27 @@
             @include('depan.template.navbar')
             <div class="main-slider slider-pro" id="main-slider" data-slider-width="100%" data-slider-height="650px"
                 data-slider-arrows="false" data-slider-buttons="false">
-                <div class="main-slider__slide sp-slide">
-                    <img class="sp-image d-block w-100" src="{{ asset('media/image/main-car.webp') }}" alt="slider" />
-                    <div class="main-slider__wrap">
-                        <div class="main-slider__wrap_slogan mt-1">
-                            <div class="sp-layer" data-width="100%" data-show-transition="left"
-                                data-hide-transition="left" data-show-duration="800" data-show-delay="400"
-                                data-hide-delay="400">
-                                <div class="main-slider__slogan">Ken'z Tranz for Effortless Journeys!</div>
-                                <div class="main-slider__title">Sewa Mobil<br>
+                <div class="sp-slides">
+                    <!-- Slide 1-->
+                    <div class="main-slider__slide sp-slide">
+                        <img class="sp-image d-block w-100" src="{{ asset('media/image/main-car.png') }}"
+                            alt="slider" />
+                        <div class="main-slider__wrap">
+                            <div class="main-slider__wrap_slogan mt-1">
+                                <div class="sp-layer" data-width="100%" data-show-transition="left"
+                                    data-hide-transition="left" data-show-duration="800" data-show-delay="400"
+                                    data-hide-delay="400">
+                                    <div class="main-slider__slogan">Ken'z Tranz for Effortless Journeys!</div>
+                                    <div class="main-slider__title">Sewa Mobil</div> <br>
                                     <h2>Premium Malang</h2>
-                                </div>
-                                <div class="text-center">
-                                    <div class="main-slider__slogan_after">Kami menyewakan mobil premium <br> dan
-                                        luxury car dengan harga sewa <br> mobil termurah <br> di Malang dan
-                                        sekitarnya
+                                    <div class="text-center">
+                                        <div class="main-slider__slogan_after">Kami menyewakan mobil premium <br> dan
+                                            luxury car dengan harga sewa <br> mobil termurah <br> di Malang dan
+                                            sekitarnya
+                                        </div>
                                     </div>
+                                    <a class=" btn btn-primary" href="{{ 'sewa-mobil' }}">Lihat Harga Sewa</a>
                                 </div>
-                                <a class=" btn btn-primary" href="">Lihat Harga Sewa</a>
                             </div>
                         </div>
                     </div>
@@ -208,7 +211,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -243,7 +247,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -278,7 +283,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -313,7 +319,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -348,7 +355,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -383,7 +391,8 @@
                                                     & Driver</p>
                                                 <p class="mb-5px"><i class="fa-solid fa-check mr-2"></i>Harga
                                                     <strong>per
-                                                        Hari</strong></p>
+                                                        Hari</strong>
+                                                </p>
                                                 <p class="mb-5px"><i
                                                         class="fa-solid fa-check mr-2"></i><strong>Excelent
                                                         Service</strong></p>
@@ -432,25 +441,7 @@
                                                     <div class="gallery__wrapper">
                                                         <ul class="gallery__items">
                                                             <li class="gallery__item row-1"><a href="#"><img
-                                                                        src="{{ asset('media/image/IMG_6132.webp') }}"
-                                                                        alt="gallery image"
-                                                                        class="gallery__image"></a></li>
-                                                            <li class="gallery__item row-1"><a href="#"><img
                                                                         src="{{ asset('media/image/IMG_6623.webp') }}"
-                                                                        alt="gallery image"
-                                                                        class="gallery__image"></a></li>
-                                                            <li class="gallery__item row-1"><a href="#"><img
-                                                                        src="{{ asset('media/image/IMG_7067.webp') }}"
-                                                                        alt="gallery image"
-                                                                        class="gallery__image"></a></li>
-                                                            <li class="gallery__item row-1 "><a href="#"><img
-                                                                        src="{{ asset('media/image/toyota-duo.JPG') }}"
-                                                                        alt="gallery image"
-                                                                        class="gallery__image"></a></li>
-                                                        </ul>
-                                                        <ul class="gallery__items">
-                                                            <li class="gallery__item row-1"><a href="#"><img
-                                                                        src="{{ asset('media/image/IMG_9154.webp') }}"
                                                                         alt="gallery image"
                                                                         class="gallery__image"></a></li>
                                                             <li class="gallery__item row-2">
@@ -562,7 +553,7 @@
                                                                 </div>
                                                             </li>
                                                             <li class="gallery__item row-1 "><a href="#"><img
-                                                                        src="{{ asset('media/image/toyota-duo.JPG') }}"
+                                                                        src="{{ asset('media/image/IMG_6132.webp') }}"
                                                                         alt="gallery image"
                                                                         class="gallery__image"></a></li>
                                                         </ul>
@@ -575,6 +566,19 @@
                             </div>
                         </section>
                         <section class="b-share section-default bg-grey" style="margin-top: -75px">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-3"></div>
+                                    <div class="ol-md-12 col-lg-6 text-center text-slogan">
+                                        <h3 class="ui-title title-decore">Artikel</h3>
+                                        <div class="h10"></div>
+                                        <div class="h10"></div>
+                                        <div class="h10"></div>
+                                        <div class="h10"></div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-3"></div>
+                                </div>
+                            </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-4">

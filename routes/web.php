@@ -27,3 +27,11 @@ Route::get('paket-wisata', [WelcomeController::class, 'VPaketWisata']);
 Route::get('tentang-kami', [WelcomeController::class, 'VTentangKami']);
 Route::get('kontak', [WelcomeController::class, 'VKontak']);
 Route::get('artikel', [WelcomeController::class, 'VArtikel']);
+
+Route::get('menu-harga', [WelcomeController::class, 'VMenuSewaMobil']);
+Route::get('menu-kontak', [WelcomeController::class, 'VMenuKontak']);
+Route::get('menu-tentangkami', [WelcomeController::class, 'VMenuTentangKami']);
+Route::get('menu-paketwisata', [WelcomeController::class, 'VMenuPaketWisata']);
+Route::get('menu-artikel', [WelcomeController::class, 'VMenuArtikel']);
+Route::get('menu-home', [WelcomeController::class, 'VMenuHome']);
+Route::get('login', [WelcomeController::class, 'VLogin']);

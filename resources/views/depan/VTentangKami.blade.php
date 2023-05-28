@@ -36,12 +36,12 @@
                                 mobil) LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil
                                 yang di sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat
                                 menampung banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift
-                                dan Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket
+                                dan Toyota Alpahard . Selain itu Kenz Tranz juga menyediakan beragam paket
                                 wisata. Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu
                                 hari, dua hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di
                                 rekomendasikan seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata
                                 Kawah Ijen Banyuwangi, anda juga dapat memilih tujuan wisata sesuai dengan keinginan
-                                anda. Malang Army Trans memberikan anda kemudahan dalam melakukan pemesanan
+                                anda. Kenz Tranz memberikan anda kemudahan dalam melakukan pemesanan
                                 kendaraan/paket wisata, sehingga perjalanan yang akan anda tempuh dapat sesuai dengan
                                 yang direncanakan.
                             </p>
@@ -60,11 +60,11 @@
                         </div>
                         <div class="col mb-5">
                             <p class="text-justify fs-18">
-                                Malang Army Trans adalah penyedia layanan sewa mobil (carter mobil / rental mobil)
+                                Kenz Tranz adalah penyedia layanan sewa mobil (carter mobil / rental mobil)
                                 LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil yang di
                                 sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat menampung
                                 banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift dan
-                                Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket wisata.
+                                Toyota Alpahard . Selain itu Kenz Tranz juga menyediakan beragam paket wisata.
                                 Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu hari, dua
                                 hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di rekomendasikan
                                 seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata Kawah Ijen

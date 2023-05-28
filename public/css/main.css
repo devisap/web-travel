@@ -5935,7 +5935,7 @@ html .btn-border:hover {
 }
 
 .form-bg01 {
-    background-image: url(../media/content/form-bg01.jpg);
+    background-image: url('../media/form-bg01.png');
 }
 
 .form-content legend,

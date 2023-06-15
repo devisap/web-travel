@@ -17,11 +17,11 @@ Route::get('/', function () {
     $data = [
         'title'  => 'Sewa Mobil Termurah di Malang - Kenz Tranz'
     ];
-    return view('depan.VHome', $data);
+    return view('user.VBeranda', $data);
 });
 
 // Route::get('home', 'App\Http\Controllers\WelcomeController@VHome');
-Route::get('home', [WelcomeController::class, 'VHome']);
+Route::get('beranda', [WelcomeController::class, 'VBeranda']);
 Route::get('sewa-mobil', [WelcomeController::class, 'VSewaMobil']);
 Route::get('paket-wisata', [WelcomeController::class, 'VPaketWisata']);
 Route::get('tentang-kami', [WelcomeController::class, 'VTentangKami']);
@@ -35,3 +35,6 @@ Route::get('menu-paketwisata', [WelcomeController::class, 'VMenuPaketWisata']);
 Route::get('menu-artikel', [WelcomeController::class, 'VMenuArtikel']);
 Route::get('menu-home', [WelcomeController::class, 'VMenuHome']);
 Route::get('login', [WelcomeController::class, 'VLogin']);
+
+// user 
+Route::get('beranda', [WelcomeController::class, 'VBeranda']);

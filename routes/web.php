@@ -34,6 +34,7 @@ Route::get('menu-tentangkami', [WelcomeController::class, 'VMenuTentangKami']);
 Route::get('menu-paketwisata', [WelcomeController::class, 'VMenuPaketWisata']);
 Route::get('menu-artikel', [WelcomeController::class, 'VMenuArtikel']);
 Route::get('menu-home', [WelcomeController::class, 'VMenuHome']);
+Route::get('menu-testimoni', [WelcomeController::class, 'VMenuTestimoni']);
 Route::get('login', [WelcomeController::class, 'VLogin']);
 
 // user 

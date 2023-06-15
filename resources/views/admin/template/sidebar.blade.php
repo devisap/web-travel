@@ -60,6 +60,12 @@
                         <span class="side-menu__label">Kontak</span>
                     </a>
                 </li>
+                <li class="slide">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-testimoni'}}">
+                        <i class="fa fa-user-plus mr-2"></i>
+                        <span class="side-menu__label">Testimoni</span>
+                    </a>
+                </li>
 
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"

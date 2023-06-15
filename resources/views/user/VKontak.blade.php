@@ -16,15 +16,15 @@
                                     <div class="col-auto">
                                         <div class="icons-rounded-box-contact">
                                             <figure class="mb-0"><img
-                                                    src="{{ asset('user/images/contact-icon1.png') }}" alt="">
+                                                    src="{{ asset('user/images/contact-icon3.png') }}" alt="">
                                             </figure>
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <span class="contact-title">Alamat:</span>
-                                        <span class="contact-parah">Perumahan
-                                            panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa
-                                            Timur 65158</span>
+                                        <div class="contact-content">
+                                            <span class="contact-title">Email:</span>
+                                            <span class="contact-parah">support@gmail.com</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row justify-content-center text-white">
@@ -37,22 +37,28 @@
                                     </div>
                                     <div class="col-auto">
                                         <span class="contact-title">Nomor Whatsapp:</span>
-                                        <span class="contact-parah">+62 821 3907 7771<span class="pr-2 pl-2">I
+                                        <span class="contact-parah"><a target="_blank"
+                                                href="https://wa.me/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.">+62 821
+                                                3907 7771</a><span class="pr-2 pl-2">I
                                             </span>Setiap Hari, jam 07.00 s/d
                                             23.00</span>
                                     </div>
                                 </div>
-                                {{-- <li class="contact-li">
+                                <div class="row justify-content-center text-white">
+                                    <div class="col-auto">
                                         <div class="icons-rounded-box-contact">
-                                            <figure class="mb-0"><img src="{{ asset('user/images/contact-icon3.png') }}"
-                                                    alt="">
+                                            <figure class="mb-0"><img
+                                                    src="{{ asset('user/images/contact-icon1.png') }}" alt="">
                                             </figure>
                                         </div>
-                                        <div class="contact-content">
-                                            <span class="contact-title">Email:</span>
-                                            <span class="contact-parah">support@redlight.com</span>
-                                        </div>
-                                    </li> --}}
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="contact-title">Alamat:</span>
+                                        <span class="contact-parah">Perumahan
+                                            panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa
+                                            Timur 65158</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -75,6 +81,27 @@
     </div>
 
     @include('user.template.footer')
+    <div id="example"></div>
 </body>
-
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>
 </html>

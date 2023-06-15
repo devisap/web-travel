@@ -92,34 +92,33 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <label for="name_mobil">Nama Mobil</label>
-                                <input type="text" class="form-control" id="name_mobil" placeholder="Masukan Nama Mobil !">
+                                <label for="aname_mobil">Nama Mobil</label>
+                                <input type="text" class="form-control" id="aname_mobil" placeholder="Masukan Nama Mobil !">
                             </div>
                             <div class="form-group">
-                                <label for="harga_mobil">Harga Mobil</label>
-                                <input type="text" class="form-control" id="harga_mobil" placeholder="Masukan Harga Mobil !">
+                                <label for="aharga_mobil">Harga Mobil</label>
+                                <input type="number" class="form-control" id="aharga_mobil" placeholder="Masukan Harga Mobil !">
                             </div>
                             <div class="form-group">
-                                <label for="deskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="deskripsi" placeholder="Masukan Deskripsi !" rows="3"></textarea>
+                                <label for="adeskripsi">Deskripsi</label>
+                                <textarea class="form-control mb-4" id="adeskripsi" placeholder="Masukan Deskripsi !" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="note">Note</label>
-                                <textarea class="form-control mb-4" id="note" placeholder="Masukan Note !" rows="3"></textarea>
+                                <label for="anote">Note</label>
+                                <textarea class="form-control mb-4" id="anote" placeholder="Masukan Note !" rows="3"></textarea>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
                                 <input type="text" class="form-control" id="no_wa" placeholder="Masukan Nomor Whatsapp CS !">
                             </div>
                             <div class="form-group">
                                 <label for="pesan_wa">Teks Pesan Whatsapp</label>
                                 <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
                                 <input type="file" name="file" class="form-control file-input" id="addImg" onchange="previewAddImg();" required />
-                                {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
                         </form>
                     </div>
@@ -142,29 +141,29 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <label for="name_mobil">Nama Mobil</label>
-                                <input type="text" class="form-control" id="name_mobil">
+                                <label for="ename_mobil">Nama Mobil</label>
+                                <input type="text" class="form-control" id="ename_mobil" name="">
                             </div>
                             <div class="form-group">
-                                <label for="harga_mobil">Harga Mobil</label>
-                                <input type="text" class="form-control" id="harga_mobil">
+                                <label for="eharga_mobil">Harga Mobil</label>
+                                <input type="text" class="form-control" id="eharga_mobil" name=""> 
                             </div>
                             <div class="form-group">
-                                <label for="deskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="deskripsi" rows="3"></textarea>
+                                <label for="edeskripsi">Deskripsi</label>
+                                <textarea class="form-control mb-4" id="edeskripsi" rows="3" name=""></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="note">Note</label>
-                                <textarea class="form-control mb-4" id="note" rows="3"></textarea>
+                                <label for="enote">Note</label>
+                                <textarea class="form-control mb-4" id="enote" rows="3" name=""></textarea>
                             </div>
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
                                 <input type="text" class="form-control" id="no_wa">
                             </div>
                             <div class="form-group">
                                 <label for="pesan_wa">Teks Pesan Whatsapp</label>
                                 <textarea class="form-control mb-4" id="pesan_wa" rows="3"></textarea>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
                                 <img class="m-3 mx-auto" id="prevEdit" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
@@ -209,9 +208,32 @@
                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
-                            
-                        </form>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <h6 class="fw-bold">Nama Mobil</h6>
+                                <p id="">Inova Reborn</p>
+                            </div>
+                            <div class="form-group">
+                                <h6 class="fw-bold">Harga Mobil</h6>
+                                <p id="">Rp. 725.000</p>
+                            </div>
+                            <div class="form-group">
+                                <h6 class="fw-bold">Deskripsi</h6>
+                                <p id="">Isi Deskripsi</p>
+                            </div>
+                            <div class="form-group">
+                                <h6 class="fw-bold">Note</h6>
+                                <p id="">Isi Deskripsi</p>
+                            </div>
+                            <div class="form-group">
+                                <h6 class="fw-bold">Foto Mobil</h6>
+                                <div class="me-7 mb-4 text-center">
+                                    <div class="">
+                                        <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>

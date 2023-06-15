@@ -42,6 +42,7 @@
                                             <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                                                 <thead>
                                                     <tr >
+                                                        <th class="wd-15p border-bottom-0">Email</th>
                                                         <th class="wd-15p border-bottom-0">Alamat</th>
                                                         <th class="wd-20p border-bottom-0">Nomor Handphone</th>
                                                         <th class="wd-15p border-bottom-0">Waktu Buka</th>
@@ -50,6 +51,7 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <td>support@gmail.com</td>
                                                         <td>Perumahan panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa Timur 65158</td>
                                                         <td>+62 821 3907 7771</td>
                                                         <td>Setiap Hari, jam 07.00 s/d 23.00</td>
@@ -82,16 +84,20 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
+                                <label for="">Email</label>
+                                <input class="form-control mb-4" type="text" name="" id="">
+                            </div>
+                            <div class="form-group">
                                 <label for="jalan">Alamat</label>
-                                <textarea class="form-control mb-4" id="jalan" rows="3">Perumahan panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa Timur 65158</textarea>
+                                <textarea class="form-control mb-4" name="" id="jalan" rows="3">Perumahan panorama garden blok S-45, Kec. Wagir, Kabupaten Malang, Jawa Timur 65158</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="no_wa">Nomor Handphone</label>
-                                <input type="text" class="form-control" id="no_wa" value="+62 821 3907 7771">
+                                <input type="text" class="form-control" name="" id="no_wa" value="+62 821 3907 7771">
                             </div>
                             <div class="form-group">
                                 <label for="name_mobil">Waktu Buka</label>
-                                <input type="text" class="form-control" id="name_mobil" value="Setiap Hari, jam 07.00 s/d 23.00">
+                                <input type="text" class="form-control" name="" id="name_mobil" value="Setiap Hari, jam 07.00 s/d 23.00">
                             </div>
                             <div class="form-group">
                                 <label for="pesan_wa">Link Google Maps</label>

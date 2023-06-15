@@ -18,7 +18,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusm tempor
                                     incididunt ut labore et dolore magna aliqua.</p> --}}
                                 <div class="banner-btn discover-btn-banner">
-                                    <a href="https://api.whatsapp.com/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Paket Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi." class="text-decoration-none">Hubungi Kami</a>
+                                    <a href="https://wa.me/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Paket Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi." class="text-decoration-none">Hubungi Kami</a>
                                 </div>
                             </div>
                             {{-- <div class="social-icons" data-aos="zoom-out-left">
@@ -34,7 +34,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
                             <div class="banner-img-content position-relative" data-aos="fade-up">
                                 <figure class="banner-img mb-0 wow slideInRight" data-wow-duration="2s">
-                                    <img class="img-fluid banner-img-width" src="{{ asset('user/images/toyota.png ') }}"
+                                    <img class="img-fluid banner-img-width" src="{{ asset('user/images/bromo.webp ') }}"
                                         alt="" />
                                 </figure>
                             </div>
@@ -107,7 +107,7 @@
                                                 <div class="card-body">
                                                     <p class="text-left text-white fs-10">Harga Paket: <b
                                                             class="text-success">725.000/hari</b></p>
-                                                    <p class="text-left text-white fs-10">Full Day (Max pukul 22.00)
+                                                    <p class="text-left text-white fs-10">
                                                         Private Trip Kawah Ijen adalah wisata dengan tujuan kawasan Kawah Ijen.
                                                     </p>
                                                 </div>
@@ -117,7 +117,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/kawah-ijen.webp ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -303,6 +303,27 @@
     </section>
    
     @include('user.template.footer')
+    <div id="example"></div>
 </body>
-
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>
 </html>

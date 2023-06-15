@@ -11,7 +11,7 @@
 		<meta name="keywords" content="">
 
 		<!-- FAVICON -->
-		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('media/icon.png') }}" />
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('user/images/icon.png') }}" />
 
 		<!-- TITLE -->
 		<title>{{ isset($title) ? $title : 'Kenz Trans' }}</title>

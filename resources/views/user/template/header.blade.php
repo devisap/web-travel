@@ -13,9 +13,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item {{ Request::segment(1) === 'beranda' ? 'active' : null }}">
+                        <li class="nav-item {{ Request::segment(1) === 'beranda'? 'active' : null }}">
                             <a class="nav-link text-decoration-none navbar-text-color home-margin-top"
-                                href="/">Home<span class="sr-only">(current)</span></a>
+                                href="beranda">Home<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item {{ Request::segment(1) === 'sewa-mobil' ? 'active' : null }}">
                             <a class="nav-link text-decoration-none navbar-text-color" href="{{ 'sewa-mobil' }}">Sewa
@@ -34,7 +34,7 @@
                     <div class="btn-talk ml-auto">
                         <ul class="m-0 p-0">
                             <li class="list-unstyled d-lg-inline-block"><a class="nav-link contact"
-                                    href="https://api.whatsapp.com/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.">Hubungi Kami</a></li>
+                                    href="https://wa.me/send?phone=6281332033337&text=Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.">Hubungi Kami</a></li>
                         </ul>
                     </div>
                 </div>

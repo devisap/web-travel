@@ -67,7 +67,7 @@
                                             <div class="col">
                                                 <div class="card-body">
                                                     <p class="text-left text-white fs-10">Harga Sewa: <b
-                                                            class="text-success">725.000/hari</b></p>
+                                                            class="text-success">650.000/hari</b></p>
                                                     <p class="text-left text-white fs-10">Full Day (Max pukul 22.00)
                                                         Include Mobil, Driver, BBM
                                                         Exclude Parkir & Makan Driver
@@ -88,7 +88,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/inova-reborn.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -172,7 +172,7 @@
                                                         Include Mobil, Driver, BBM
                                                         Exclude Parkir & Makan Driver
                                                         Rute Dalam Kota Malang / Batu
-                                                        Kapasitas Max. 6 orang
+                                                        Kapasitas Max. 9 orang
                                                     </p>
                                                     <p class="text-left text-secondary fs-note">
                                                         Note 
@@ -188,7 +188,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/elf-long.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -238,7 +238,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/mobilio.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -288,7 +288,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/ertiga.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -330,7 +330,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/avanza.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -347,6 +347,27 @@
     </section>
    
     @include('user.template.footer')
+    <div id="example"></div>
 </body>
-
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>
 </html>

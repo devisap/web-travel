@@ -62,19 +62,19 @@
                                                             <a href="#" class="btn btn-icon btn-primary me-2 my-2"
                                                                 data-bs-target="#mdl_detail" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Detail Harga Sewa Mobil !"
+                                                                title="Detail Harga Sewa Paket Wisata !"
                                                                 data-bs-original-title="Detail">
                                                                 <i class="fe fe-info"></i></a>
                                                             <a href="#" class="btn btn-icon btn-warning me-2 my-2"
                                                                 data-bs-target="#mdl_edit" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Edit Harga Sewa Mobil"
+                                                                title="Edit Harga Sewa Paket Wisata"
                                                                 data-bs-original-title="Edit">
                                                                 <i class="fe fe-edit"></i></a>
                                                             <a href="#" class="btn btn-icon btn-danger me-2 my-2 my-2"
                                                                 data-bs-target="#mdl_delete" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Hapus Harga Sewa Mobil"
+                                                                title="Hapus Harga Sewa Paket Wisata"
                                                                 data-bs-original-title="Hapus">
                                                                 <i class="fe fe-trash"></i></a>
                                                         </td>
@@ -97,7 +97,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Tambah Data Harga Sewa Mobil </h5>
+                        <h5 class="modal-title" id="mdl_label">Tambah Data Harga Sewa Paket Wisata </h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
@@ -113,11 +113,19 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="nama_paket">Destinasi Paket Wisata</label>
-                                <input type="text" class="form-control" id="nama_paket"
+                                <label for="anama_paket">Destinasi Paket Wisata</label>
+                                <input type="text" class="form-control" id="anama_paket"
                                     placeholder="Masukan Destinasi Paket Wisata !">
                             </div>
                             <div class="form-group">
+                                <label for="aharga_paket">Harga Paket</label>
+                                <input type="number" class="form-control" id="aharga_paket">
+                            </div>
+                            <div class="form-group">
+                                <label for="adeskripsi">Deskripsi</label>
+                                <textarea class="form-control mb-4" id="adeskripsi" rows="3"></textarea>
+                            </div>
+                            {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
                                 <input type="text" class="form-control" id="no_wa"
                                     placeholder="Masukan Nomor Whatsapp CS !">
@@ -125,7 +133,7 @@
                             <div class="form-group">
                                 <label for="pesan_wa">Teks Pesan Whatsapp</label>
                                 <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Paket Wisata </label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt=""
@@ -149,7 +157,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Edit Data Harga Sewa Mobil </h5>
+                        <h5 class="modal-title" id="mdl_label">Edit Data Harga Sewa Paket Wisata </h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
@@ -157,7 +165,7 @@
                         <form action="">
                             <div class="form-group">
                                 <label class="form-label">Jenis Paket Wisata</label>
-                                <select class="form-control select2 form-select" data-placeholder="Pilih Salah 1">
+                                <select class="form-control select2 form-select" data-placeholder="Pilih Salah 1" id="" name="">
                                     {{-- <option label="Pilih Salah 1"></option> --}}
                                     <option value="1">Paket Wisata 1 Hari</option>
                                     <option value="2">Paket Wisata 2 Hari 1 Malam</option>
@@ -165,17 +173,25 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="nama_paket">Destinasi Paket Wisata</label>
-                                <input type="text" class="form-control" id="nama_paket">
+                                <label for="enama_paket">Destinasi Paket Wisata</label>
+                                <input type="text" class="form-control" id="enama_paket" name="">
                             </div>
                             <div class="form-group">
+                                <label for="eharga_paket">Harga Paket Wisata</label>
+                                <input type="number" class="form-control" id="eharga_paket" name="">
+                            </div>
+                            <div class="form-group">
+                                <label for="edeskripsi">Deskripsi</label>
+                                <textarea class="form-control mb-4" id="edeskripsi" name="" rows="3"></textarea>
+                            </div>
+                            {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
                                 <input type="text" class="form-control" id="no_wa">
                             </div>
                             <div class="form-group">
                                 <label for="pesan_wa">Teks Pesan Whatsapp</label>
                                 <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Paket Wisata </label>
                                 <img class="m-3 mx-auto" id="prevEdit" alt=""
@@ -233,18 +249,26 @@
                             <p id="">Bromo</p>
                         </div>
                         <div class="form-group">
+                            <h6 class="fw-bold">Harga Paket Wisata</h6>
+                            <p id="">Bromo</p>
+                        </div>
+                        <div class="form-group">
+                            <h6 class="fw-bold">Deskripsi Paket Wisata</h6>
+                            <p id="">Bromo</p>
+                        </div>
+                        {{-- <div class="form-group">
                             <h6 class="fw-bold">Nomor Whatsapp CS/ Admin</h6>
                             <p id="">628572918901</p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Isi Pesan Teks Pesanan</h6>
                             <p id="">Saya berminat dengan paket wisata Bromo Midnight 1 Day Atas nama: Tanggal berangkat: Bulan:</p>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <h6 class="fw-bold">Foto Paket wisata</h6>
                             <div class="me-7 mb-4 text-center">
                                 <div class="">
-                                    <img alt="image" id="" src="{{ asset('media/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                    <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
                                 </div>
                             </div>
                         </div>

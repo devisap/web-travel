@@ -18,7 +18,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusm tempor
                                     incididunt ut labore et dolore magna aliqua.</p> --}}
                                 <div class="banner-btn discover-btn-banner">
-                                    <a href="#" class="text-decoration-none">Lihat Harga Sewa</a>
+                                    <a href="{{'sewa-mobil'}}" class="text-decoration-none">Lihat Harga Sewa</a>
                                 </div>
                             </div>
                             {{-- <div class="social-icons" data-aos="zoom-out-left">
@@ -184,7 +184,7 @@
                                             <div class="col">
                                                 <div class="card-body">
                                                     <p class="text-left text-white fs-10">Harga Sewa: <b
-                                                            class="text-success">725.000/hari</b></p>
+                                                            class="text-success">650.000/hari</b></p>
                                                     <p class="text-left text-white fs-10">Full Day (Max pukul 22.00)
                                                         Include Mobil, Driver, BBM
                                                         Exclude Parkir & Makan Driver
@@ -205,7 +205,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/inova-reborn.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -289,7 +289,7 @@
                                                         Include Mobil, Driver, BBM
                                                         Exclude Parkir & Makan Driver
                                                         Rute Dalam Kota Malang / Batu
-                                                        Kapasitas Max. 6 orang
+                                                        Kapasitas Max. 9 orang
                                                     </p>
                                                     <p class="text-left text-secondary fs-note">
                                                         Note 
@@ -305,7 +305,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/elf-long.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -355,7 +355,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/mobilio.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -405,7 +405,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/ertiga.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -447,7 +447,7 @@
                                                     <figure class="banner-img mb-0 wow slideInRight"
                                                         data-wow-duration="2s">
                                                         <img class="img-fluid "
-                                                            src="{{ asset('user/images/toyota.png ') }}"
+                                                            src="{{ asset('user/images/avanza.png ') }}"
                                                             alt="" />
                                                     </figure>
                                                 </div>
@@ -537,7 +537,7 @@
                                                 <img src="{{ asset('user/images/avanza.png ') }}" alt="" />
                                             </div>
                                             <div class="carousel-item active">
-                                                <img src="{{ asset('user/images/black-car.webp ') }}"
+                                                <img src="{{ asset('user/images/mobilio.png ') }}"
                                                     alt="" />
                                             </div>
                                         </div>
@@ -549,11 +549,11 @@
                                             <span class="carousel-control-next-icon"></span>
                                         </a>
                                     </div>
-                                    <span class="post-meta-category"><a href="#">Travel</a></span>
+                                    <span class="post-meta-category"><a href="{{'artikel'}}">Travel</a></span>
                                     <div class="post-item-description">
                                         <span class="post-meta-date"> Jan 21, 2017 </span>
                                         <h2>
-                                            <a href="#">Judul Artikel</a>
+                                            <a href="{{'artikel'}}">Judul Artikel</a>
                                         </h2>
                                         <p>
                                             Curabitur pulvinar euismod ante, ac sagittis ante
@@ -561,7 +561,7 @@
                                             Fusce at velit id ligula ac sagittis ante posuere ac
                                             pharetra laoreet commodo dolor porta.
                                         </p>
-                                        <a href="#" class="item-link text-decoration-none">Baca Selengkapnya <i
+                                        <a href="{{'artikel'}}" class="item-link text-decoration-none">Baca Selengkapnya <i
                                                 class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -573,6 +573,27 @@
         </div>
     </section>
     @include('user.template.footer')
+    <div id="example"></div>
 </body>
-
+<script type="text/javascript">
+    whatsappchat.multipleUser({
+        selector: "#example",
+        users: [{
+                name: "CS Diah Sukma",
+                phone: "6281332033337",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+            {
+                name: "CS Henry",
+                phone: "6282139077771",
+                designation: "Konsultasi Pemesanan",
+                image: "user/floating-wa/icons8-whatsapp-64.svg",
+            },
+        ],
+        headerMessage: "Hi! Click one of our member below to chat on <strong>Whatsapp</strong> <br> ",
+        chatBoxMessage: "Admin kami akan membalas dalam beberapa saat",
+        color: "#25D366",
+    });
+</script>
 </html>

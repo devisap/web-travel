@@ -27,11 +27,6 @@
                             <div>
                                 <h1 class="page-title">Menu Home / Landing Page</h1>
                             </div>
-                            <div class="ms-auto pageheader-btn">
-                                <button type="button" class="btn btn-primary" data-bs-target="#mdl_addCarousel"
-                                    data-bs-toggle="modal" href="javascript:void(0)"> <i
-                                        class="fe fe-plus me-2"></i>Tambah Foto Carousel</button>
-                            </div>
                         </div>
                         <!-- PAGE-HEADER END -->
 
@@ -40,76 +35,38 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-header border-bottom">
-                                        <h3 class="card-title">Deskripsi Kenz Tranz</h3>
+                                        <h3 class="card-title">Landing Page Kenz Tranz</h3>
                                     </div>
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                                                 <thead>
                                                     <tr class="text-center">
-                                                        <th class="wd-15p border-bottom-0">Deskripsi</th>
+                                                        <th class="wd-15p border-bottom-0">Judul</th>
                                                         <th class="wd-10p border-bottom-0">Aksi</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Ken'zTranz mempermudah Anda untuk keperluan transportasi...
-                                                        </td>
+                                                        <td>Sewa Mobil Malang</td>
                                                         <td>
                                                             <a href="#" class="btn btn-icon btn-warning me-2 my-2"
-                                                                data-bs-target="#mdl_deskripsi" data-bs-toggle="modal"
+                                                                data-bs-target="#mdl_judul" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Edit Harga Sewa Mobil"
+                                                                title="Edit Judul Landing Page"
                                                                 data-bs-original-title="Edit">
                                                                 <i class="fe fe-edit"></i></a>
                                                         </td>
                                                     </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row row-sm">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header border-bottom">
-                                        <h3 class="card-title">Carousel</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
-                                                <thead>
-                                                    <tr class="text-center">
-                                                        <th class="wd-15p border-bottom-0">No</th>
-                                                        <th class="wd-15p border-bottom-0">Thumbnail</th>
-                                                        <th class="wd-20p border-bottom-0">Status</th>
-                                                        <th class="wd-10p border-bottom-0">Aksi</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td style="width: 200px; height: 150px"><img
-                                                                src="{{ asset('media/image/main-car.png') }}"
-                                                                alt="thumb1" class="thumbimg"></td>
-                                                        <td class="text-center"><span
-                                                                class="badge bg-primary">Diunggah</span></td>
+                                                        <td>Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.</td>
                                                         <td>
                                                             <a href="#" class="btn btn-icon btn-warning me-2 my-2"
-                                                                data-bs-target="#mdl_editCarousel"
-                                                                data-bs-toggle="modal" href="javascript:void(0)"
-                                                                data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil"
+                                                                data-bs-target="#mdl_link" data-bs-toggle="modal"
+                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                title="Edit Isi Pesan"
                                                                 data-bs-original-title="Edit">
                                                                 <i class="fe fe-edit"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2"
-                                                                data-bs-target="#mdl_delCarousel" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Hapus Harga Sewa Mobil"
-                                                                data-bs-original-title="Hapus">
-                                                                <i class="fe fe-trash"></i></a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -176,20 +133,20 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="mdl_deskripsi" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+        <div class="modal fade" id="mdl_judul" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Ubah Deskripsi Pada Landing Page</h5>
+                        <h5 class="modal-title" id="mdl_label">Ubah Judul Pada Landing Page</h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <label for="deskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="deskripsi" rows="3">Ken'zTranz mempermudah Anda untuk keperluan transportasi...</textarea>
+                                <label for="deskripsi">Judul</label>
+                                <textarea class="form-control mb-4" id="deskripsi" rows="3">Sewa Mobil Malang</textarea>
                             </div>
                         </form>
                     </div>
@@ -200,33 +157,20 @@
                 </div>
             </div>
         </div>
-
-        {{-- Carousel  --}}
-        <div class="modal fade" id="mdl_addCarousel" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+        <div class="modal fade" id="mdl_link" tabindex="-1" role="dialog" aria-labelledby="mdl_linklabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Tambah Foto Carousel</h5>
+                        <h5 class="modal-title" id="mdl_linklabel">Ubah Judul Link Hubungi Kami</h5>
                         <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="form-group">
-                                <label class="form-label">Status Foto</label>
-                                <select class="form-control select2 form-select">
-                                    <option value="1">Diunggah</option>
-                                    <option value="2">Diarsipkan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formFile" class="form-label">Unggah Foto Carousel </label>
-                                <img class="m-3 mx-auto" id="prevAddCarousel" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input"
-                                    id="addImgCarousel" onchange="previewAddImgCarousel();" required />
-                                {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
+                                <label for="deskripsi">Link</label>
+                                <textarea class="form-control mb-4" id="deskripsi" rows="3">Selamat Datang di *Ken'z Tranz* Admin kami akan membalas pesan Anda secepat mungkin. Anda bisa memilih beberapa layanan kami diantaranya :1. Sewa Mobil 2. Transportasi VIP 3. Perjalanan Dinas 4. Acara Keluarga 5. Pelayanan Tour Wisata 6. Pernikahan 7. Dan lain sebagainya Kami menyediakan armada terbaru yang bersih dan wangi.</textarea>
                             </div>
                         </form>
                     </div>
@@ -237,60 +181,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="mdl_editCarousel" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Edit Foto Carousel</h5>
-                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
-                                aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="form-group">
-                                <label class="form-label">Status Foto</label>
-                                <select class="form-control select2 form-select">
-                                    <option value="1">Diunggah</option>
-                                    <option value="2">Diarsipkan</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="formFile" class="form-label">Unggah Foto Carousel </label>
-                                <img class="m-3 mx-auto" id="prevEditCarousel" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input"
-                                    id="editImgCarousel" onchange="previewEditImgCarousel();" required />
-                                {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="mdl_delCarousel" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="mdl_label">Hapus Foto Carousel </h5>
-                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
-                                aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Apakah Anda yakin ingin menghapus foto Carousel tersebut ?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Hapus</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         {{-- Why Choose Us  --}}
         <div class="modal fade" id="mdl_editChoose" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
             aria-hidden="true">

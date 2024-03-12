@@ -10,22 +10,20 @@
                                      class="img-fluid" /></a>
                          </figure>
                          <p class="red-light-footer-p">Kenz Tranz - Agen Sewa Mobil di Jawa Timur</p>
-                         {{-- <div class="social-icons teams-social-icons">
+                         <div class="teams-social-icons">
                             <ul class="list-unstyled">
-                                <li><a href="" class="text-decoration-none red-hover"><i
+                                <li style="display: inline !important;"><a href="https://www.instagram.com/kenz_trans/" class="text-decoration-none red-hover mr-1" target="_blank"><i
+                                            class="fa-brands fa-square-instagram  social-networks"></i></a></li>
+                                <li style="display: inline !important;"><a href="https://m.facebook.com/people/KenzTrans/100064020966209/" class="text-decoration-none red-hover mr-1" target="_blank"><i
                                             class="fa-brands fa-square-facebook  social-networks"></i></a></li>
-                                <li><a href="" class="text-decoration-none red-hover"><i
-                                            class="fa-brands fa-square-twitter social-networks"></i></a></li>
-                                <li><a href="" class="text-decoration-none red-hover"><i
-                                            class="fa-brands fa-linkedin social-networks"></i></a></li>
-                                <li><a href="" class="text-decoration-none red-hover"><i
-                                            class="fa-brands fa-square-pinterest social-networks"></i></a></li>
+                                <li style="display: inline !important;"><a href="http://www.tiktok.com/@kenz.trans" class="text-decoration-none red-hover mr-1" target="_blank"><i
+                                            class="fa-brands fa-tiktok social-networks"></i></a></li>
                             </ul>
-                        </div> --}}
+                        </div>
                      </div>
                  </div>
                  <div class="col-xl-2 col-lg-3 col-md-2 col-sm-12 d-lg-block d-none">
-                     <ul class="list-unstyled services-footer" data-aos="flip-left">
+                     <ul class="list-unstyled services-footer" data-aos="flip-left" >
                          <li class="list-item footer-margin-left">
                              <h5 class="footer-link  footer-services-heading">
                                  Navigasi

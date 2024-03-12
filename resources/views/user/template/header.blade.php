@@ -2,7 +2,7 @@
     <div class="main-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a class="navbar-brand pt-0" href="/"><img src="{{ asset('user/images/logo.png') }}" alt=""
+                <a class="navbar-brand pt-0" href="/"><img src="{{ asset('user/images/icon.png') }}" alt=""
                         class="img-fluid diverge-logo" style="width: 100px" /></a>
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"

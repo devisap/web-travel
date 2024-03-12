@@ -199,6 +199,56 @@
                             </div>
                         </div>
                     </div>
+                    {{-- 5  --}}
+                    <div class="cyber-content accordian-text">
+                        <div class="accordian-inner">
+                            <div id="accordion2">
+                                <div class="accordion-card">
+                                    <div class="" id="headingFive">
+                                        <a href="#" class="btn btn-link collapsed text-decoration-none"
+                                            data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                                            aria-controls="collapseFive">
+                                            <h5 class="faq-btn-text">BRV</h5>
+                                        </a>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                        data-parent="#accordion2">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="card-body">
+                                                    <p class="text-left text-white fs-10">Harga Sewa: <b
+                                                            class="text-success">450.000/hari</b></p>
+                                                    <p class="text-left text-white fs-10">Full Day (Max pukul 22.00)
+                                                        Include Mobil, Driver, BBM
+                                                        Exclude Parkir & Makan Driver
+                                                        Rute Dalam Kota Malang / Batu
+                                                        Kapasitas Max. 6 orang
+                                                    </p>
+                                                    <p class="text-left text-secondary fs-note">
+                                                        Note 
+                                                        <br>
+                                                        *Harga khusus untuk wilayah Malang & Batu
+                                                        <br>
+                                                        *Tidak menerima Lepas Kunci
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col my-auto">
+                                                <div class="card-body ">
+                                                    <figure class="banner-img mb-0 wow slideInRight"
+                                                        data-wow-duration="2s">
+                                                        <img class="img-fluid "
+                                                            src="{{ asset('user/images/brv.png ') }}"
+                                                            alt="" />
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     {{-- 5 --}}
                     <div class="cyber-content accordian-text">
                         <div class="accordian-inner">

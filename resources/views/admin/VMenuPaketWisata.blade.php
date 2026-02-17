@@ -124,15 +124,6 @@
                                 <label for="adeskripsi">Deskripsi <span style="color:#c30010">*</span></label>
                                 <textarea name="t_desc" class="form-control mb-4" id="adeskripsi" rows="3"></textarea>
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="no_wa">Nomor Whatsapp</label>
-                                <input type="text" class="form-control" id="no_wa"
-                                    placeholder="Masukan Nomor Whatsapp CS !">
-                            </div>
-                            <div class="form-group">
-                                <label for="pesan_wa">Teks Pesan Whatsapp</label>
-                                <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Paket Wisata <span style="color:#c30010">*</span> </label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt=""

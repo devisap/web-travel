@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AdvantageModel;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -78,13 +79,18 @@ class WelcomeController extends Controller
         ];
         return view('admin.VMenuTentangKami', $data);
     }
+
     public function VMenuHome()
     {
+        $advantages = AdvantageModel::orderBy('a_id', 'desc')->get();
         $data = [
-        	'title'  => 'Menu Home / Landing Page - Kenz Tranz'
+            'title'  => 'Menu Home / Landing Page - Kenz Tranz',
+            'advantages' => $advantages
         ];
+
         return view('admin.VMenuHome', $data);
     }
+    
     public function VMenuArtikel()
     {
         $data = [

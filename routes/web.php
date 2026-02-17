@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdvantageController;
 use App\Http\Controllers\RentcarController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
@@ -35,25 +36,25 @@ Route::get('menu-kontak', [WelcomeController::class, 'VMenuKontak']);
 Route::get('menu-tentangkami', [WelcomeController::class, 'VMenuTentangKami']);
 Route::get('menu-paketwisata', [WelcomeController::class, 'VMenuPaketWisata']);
 Route::get('menu-artikel', [WelcomeController::class, 'VMenuArtikel']);
-Route::get('menu-home', [WelcomeController::class, 'VMenuHome']);
+
 Route::get('menu-testimoni', [WelcomeController::class, 'VMenuTestimoni']);
 Route::get('login', [WelcomeController::class, 'VLogin']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/rentcar', [RentcarController::class, 'index'])->name('rentcar.index');
     Route::post('/rentcar', [RentcarController::class, 'store'])->name('rentcar.store');
-    Route::get('/rentcar/{id}', [RentcarController::class, 'show'])->name('rentcar.show');
     Route::post('/rentcar/{id}', [RentcarController::class, 'update'])->name('rentcar.update');
     Route::delete('/rentcar/{id}', [RentcarController::class, 'destroy'])->name('rentcar.destroy');
-});
 
-Route::prefix('admin')->group(function () {
     Route::get('/tour', [TourController::class, 'index'])->name('tour.index');
     Route::post('/tour', [TourController::class, 'store'])->name('tour.store');
-    Route::get('/tour/{id}', [TourController::class, 'show'])->name('tour.show');
     Route::post('/tour/{id}', [TourController::class, 'update'])->name('tour.update');
     Route::delete('/tour/{id}', [TourController::class, 'destroy'])->name('tour.destroy');
-});
 
+    Route::get('/home', [WelcomeController::class, 'VMenuHome'])->name('home.index');
+    Route::post('/advantage', [AdvantageController::class, 'store'])->name('advantage.store');
+    Route::post('/advantage/{id}', [AdvantageController::class, 'update'])->name('advantage.update');
+    Route::delete('/advantage/{id}', [AdvantageController::class, 'destroy'])->name('advantage.destroy');
+});
 // user 
 Route::get('beranda', [WelcomeController::class, 'VBeranda']);

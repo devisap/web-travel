@@ -79,6 +79,13 @@
 
                         <div class="row row-sm">
                             <div class="col-lg-12">
+                                <div class="page-header">
+                                    <div class="ms-auto pageheader-btn">
+                                        <button type="button" class="btn btn-primary" data-bs-target="#mdl_add_advantage"
+                                            data-bs-toggle="modal" href="javascript:void(0)"> <i
+                                                class="fe fe-plus me-2"></i>Tambah Data</button>
+                                    </div>
+                                </div>
                                 <div class="card">
                                     <div class="card-header border-bottom">
                                         <h3 class="card-title">Kenapa Memilih Kami !</h3>
@@ -95,31 +102,36 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Mobil Terawat</td>
-                                                        <td>Kami selalu menjaga performa serta kebersihan...</td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2"
-                                                                data-bs-target="#mdl_detailChoose" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Detail Harga Sewa Mobil !"
-                                                                data-bs-original-title="Detail">
-                                                                <i class="fe fe-info"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2"
-                                                                data-bs-target="#mdl_editChoose" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Edit Harga Sewa Mobil"
-                                                                data-bs-original-title="Edit">
-                                                                <i class="fe fe-edit"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2"
-                                                                data-bs-target="#mdl_deleteChoose" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Hapus Harga Sewa Mobil"
-                                                                data-bs-original-title="Hapus">
-                                                                <i class="fe fe-trash"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                    @foreach ($advantages as $i => $row)
+                                                        <tr>
+                                                            <td>{{ $i + 1 }}</td>
+                                                            <td>{{ $row->a_title }}</td>
+                                                            <td>{{ $row->a_desc }}</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail-advantage"
+                                                                    data-title="{{ $row->a_title }}" data-desc="{{ $row->a_desc }}"
+                                                                    data-bs-target="#mdl_detail_advantage" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Detail Harga Sewa Mobil !"
+                                                                    data-bs-original-title="Detail">
+                                                                    <i class="fe fe-info"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit-advantage"
+                                                                    data-id="{{ $row->a_id }}" data-title="{{ $row->a_title }}" data-desc="{{ $row->a_desc }}"
+                                                                    data-bs-target="#mdl_edit_advantage" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Edit Harga Sewa Mobil"
+                                                                    data-bs-original-title="Edit">
+                                                                    <i class="fe fe-edit"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-danger me-2 my-2 btn-delete-advantage"
+                                                                    data-id="{{ $row->a_id }}"
+                                                                    data-bs-target="#mdl_delete_advantage" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Hapus Harga Sewa Mobil"
+                                                                    data-bs-original-title="Hapus">
+                                                                    <i class="fe fe-trash"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -183,7 +195,38 @@
         </div>
         
         {{-- Why Choose Us  --}}
-        <div class="modal fade" id="mdl_editChoose" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+        <div class="modal fade" id="mdl_add_advantage" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mdl_label">Tambah Data Kenapa Memilih Kami !  </h5>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                                aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="{{ url('admin/advantage') }}" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <label for="judul">Judul <span style="color:#c30010">*</span></label>
+                                <input name="a_title" type="text" class="form-control" id="judul" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="deskripsi">Deskripsi <span style="color:#c30010">*</span></label>
+                                <textarea name="a_desc" class="form-control mb-4" id="deskripsi" rows="3" required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {{-- Why Choose Us  --}}
+        <div class="modal fade" id="mdl_edit_advantage" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -193,26 +236,27 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="form-edit-advantage" action="" method="POST">
+                            @csrf
                             <div class="form-group">
-                                <label for="judul">Judul</label>
-                                <input type="text" class="form-control" id="judul">
+                                <label for="judul">Judul <span style="color:#c30010">*</span></label>
+                                <input name="a_title" type="text" class="form-control" id="eatitle" required>
                             </div>
                             <div class="form-group">
-                                <label for="deskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="deskripsi" rows="3"></textarea>
+                                <label for="deskripsi">Deskripsi <span style="color:#c30010">*</span></label>
+                                <textarea name="a_desc" class="form-control mb-4" id="eadesc" rows="3" required></textarea>
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
 
-        <div class="modal fade" id="mdl_deleteChoose" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+        <div class="modal fade" id="mdl_delete_advantage" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -225,14 +269,18 @@
                         <p>Apakah Anda yakin ingin menghapus data Kenapa Memilih Kami tersebut ?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Hapus</button>
+                        <form id="form-delete-advantage" action="" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Hapus</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="modal fade" id="mdl_detailChoose" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
+        <div class="modal fade" id="mdl_detail_advantage" tabindex="-1" role="dialog" aria-labelledby="mdl_label"
             aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -244,11 +292,11 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <h6 class="fw-bold">Judul</h6>
-                            <p id="">Mobil terawat</p>
+                            <p id="datitle"></p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Keterangan</h6>
-                            <p id="">Keterangan</p>
+                            <p id="dadesc"></p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -280,4 +328,28 @@
             document.getElementById("prevEditCarousel").src = oFREvent.target.result;
         };
     };
+
+    $(".btn-detail-advantage").on("click", function(){
+        let id = $(this).data('id');
+        let title = $(this).data('title');
+        let desc = $(this).data('desc');
+
+        $('#datitle').html(title)
+        $('#dadesc').html(`${desc}`)
+    });
+
+    $(".btn-edit-advantage").on("click", function(){
+        let id = $(this).data('id');
+        let title = $(this).data('title');
+        let desc = $(this).data('desc');
+
+        $('#eatitle').val(title)
+        $('#eadesc').html(`${desc}`)
+        $('#form-edit-advantage').attr('action', '/admin/advantage/' + id);
+    });
+
+    $(".btn-delete-advantage").on("click", function(){
+        let id = $(this).data('id')
+        $('#form-delete-advantage').attr('action', '/admin/advantage/' + id);
+    });
 </script>

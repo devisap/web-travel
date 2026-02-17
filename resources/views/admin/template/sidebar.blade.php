@@ -25,19 +25,19 @@
                     <h3>Menu</h3>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-home'}}">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/home')}}">
                         <i class="fa fa-home mr-2"></i>
                         <span class="side-menu__label">Home / Landing Page</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-harga'}}">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/rentcar') }}">
                        <i class="fa fa-car mr-2"></i>
                         <span class="side-menu__label">Harga Sewa Mobil</span>
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-paketwisata'}}">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/tour') }}">
                         <i class="fa fa-map-marker mr-2"></i>
                         <span class="side-menu__label">Paket Wisata</span>
                     </a>

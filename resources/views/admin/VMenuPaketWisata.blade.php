@@ -54,31 +54,33 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>Paket Wisata 1 Hari</td>
-                                                        <td>Bromo</td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2"
-                                                                data-bs-target="#mdl_detail" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Detail Harga Sewa Paket Wisata !"
-                                                                data-bs-original-title="Detail">
-                                                                <i class="fe fe-info"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2"
-                                                                data-bs-target="#mdl_edit" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Edit Harga Sewa Paket Wisata"
-                                                                data-bs-original-title="Edit">
-                                                                <i class="fe fe-edit"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2 my-2"
-                                                                data-bs-target="#mdl_delete" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Hapus Harga Sewa Paket Wisata"
-                                                                data-bs-original-title="Hapus">
-                                                                <i class="fe fe-trash"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                    @foreach ($tours as $i => $row)
+                                                        <tr>
+                                                            <td>{{ $i + 1 }}</td>
+                                                            <td>{{ $row->t_title }}</td>
+                                                            <td>{{ $row->t_destination }}</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail" data-id="{{ $row->t_id }}" data-title="{{ $row->t_title }}" data-destination="{{ $row->t_destination }}" data-desc="{{ $row->t_desc }}" data-price="{{ $row->t_price }}" data-img="{{ $row->t_img }}"
+                                                                    data-bs-target="#mdl_detail" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Detail Harga Sewa Paket Wisata !"
+                                                                    data-bs-original-title="Detail">
+                                                                    <i class="fe fe-info"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit" data-id="{{ $row->t_id }}" data-title="{{ $row->t_title }}" data-destination="{{ $row->t_destination }}" data-desc="{{ $row->t_desc }}" data-price="{{ $row->t_price }}" data-img="{{ $row->t_img }}"
+                                                                    data-bs-target="#mdl_edit" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Edit Harga Sewa Paket Wisata"
+                                                                    data-bs-original-title="Edit">
+                                                                    <i class="fe fe-edit"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-danger me-2 my-2 my-2 btn-delete" data-id="{{ $row->t_id }}"
+                                                                    data-bs-target="#mdl_delete" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Hapus Harga Sewa Paket Wisata"
+                                                                    data-bs-original-title="Hapus">
+                                                                    <i class="fe fe-trash"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -102,28 +104,25 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form action="{{ url("admin/tour") }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
-                                <label class="form-label">Jenis Paket Wisata</label>
-                                <select class="form-control select2 form-select" data-placeholder="Choose one">
-                                    {{-- <option label="Pilih Salah 1"></option> --}}
-                                    <option value="1">Paket Wisata 1 Hari</option>
-                                    <option value="2">Paket Wisata 2 Hari 1 Malam</option>
-                                    <option value="3">Paket Wisata 3 Hari 2 Malam</option>
-                                </select>
+                                <label class="form-label">Jenis Paket Wisata <span style="color:#c30010">*</span></label>
+                                <input type="text" class="form-control" id="ajenis" name="t_title"
+                                    placeholder="Masukan Jenis Paket !">
                             </div>
                             <div class="form-group">
-                                <label for="anama_paket">Destinasi Paket Wisata</label>
-                                <input type="text" class="form-control" id="anama_paket"
+                                <label for="anama_paket">Destinasi Paket Wisata <span style="color:#c30010">*</span></label>
+                                <input type="text" class="form-control" id="anama_paket" name="t_destination"
                                     placeholder="Masukan Destinasi Paket Wisata !">
                             </div>
                             <div class="form-group">
-                                <label for="aharga_paket">Harga Paket</label>
-                                <input type="number" class="form-control" id="aharga_paket">
+                                <label for="aharga_paket">Harga Paket <span style="color:#c30010">*</span></label>
+                                <input type="number" class="form-control" id="aharga_paket" name="t_price">
                             </div>
                             <div class="form-group">
-                                <label for="adeskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="adeskripsi" rows="3"></textarea>
+                                <label for="adeskripsi">Deskripsi <span style="color:#c30010">*</span></label>
+                                <textarea name="t_desc" class="form-control mb-4" id="adeskripsi" rows="3"></textarea>
                             </div>
                             {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
@@ -135,19 +134,19 @@
                                 <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
                             </div> --}}
                             <div class="form-group">
-                                <label for="formFile" class="form-label">Unggah Foto Paket Wisata </label>
+                                <label for="formFile" class="form-label">Unggah Foto Paket Wisata <span style="color:#c30010">*</span> </label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt=""
                                     style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="addImg"
+                                <input type="file" name="t_img" class="form-control file-input" id="addImg"
                                     onchange="previewAddImg();" required />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -162,50 +161,42 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="form-edit" action="" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
-                                <label class="form-label">Jenis Paket Wisata</label>
-                                <select class="form-control select2 form-select" data-placeholder="Pilih Salah 1" id="" name="">
-                                    {{-- <option label="Pilih Salah 1"></option> --}}
-                                    <option value="1">Paket Wisata 1 Hari</option>
-                                    <option value="2">Paket Wisata 2 Hari 1 Malam</option>
-                                    <option value="3">Paket Wisata 3 Hari 2 Malam</option>
-                                </select>
+                                <label class="form-label">Jenis Paket Wisata <span style="color:#c30010">*</span></label>
+                                <input type="text" class="form-control" id="etitle" name="t_title"
+                                    placeholder="Masukan Jenis Paket !" required>
                             </div>
                             <div class="form-group">
-                                <label for="enama_paket">Destinasi Paket Wisata</label>
-                                <input type="text" class="form-control" id="enama_paket" name="">
+                                <label for="anama_paket">Destinasi Paket Wisata <span style="color:#c30010">*</span></label>
+                                <input type="text" class="form-control" id="edestination" name="t_destination"
+                                    placeholder="Masukan Destinasi Paket Wisata !" required>
                             </div>
                             <div class="form-group">
-                                <label for="eharga_paket">Harga Paket Wisata</label>
-                                <input type="number" class="form-control" id="eharga_paket" name="">
+                                <label for="aharga_paket">Harga Paket <span style="color:#c30010">*</span></label>
+                                <input type="number" class="form-control" id="eprice" name="t_price" required>
                             </div>
                             <div class="form-group">
-                                <label for="edeskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="edeskripsi" name="" rows="3"></textarea>
+                                <label for="adeskripsi">Deskripsi <span style="color:#c30010">*</span></label>
+                                <textarea name="t_desc" class="form-control mb-4" id="edesc" rows="3" required></textarea>
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="no_wa">Nomor Whatsapp</label>
-                                <input type="text" class="form-control" id="no_wa">
-                            </div>
-                            <div class="form-group">
-                                <label for="pesan_wa">Teks Pesan Whatsapp</label>
-                                <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Paket Wisata </label>
-                                <img class="m-3 mx-auto" id="prevEdit" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="editImg"
-                                    onchange="previewEditImg();" required />
+                                <div class="text-center">
+                                    <img class="m-3 mx-auto" id="prevEdit" alt=""
+                                        style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                </div>
+                                <input type="file" name="t_img" class="form-control file-input" id="editImg"
+                                    onchange="previewEditImg();" />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -223,8 +214,13 @@
                         <p>Apakah Anda yakin ingin menghapus data paket wisata tersebut ?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Hapus</button>
+                        <form id="form-delete" action="" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input type="hidden" id="mdl_delete_id">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Hapus</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -242,33 +238,25 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <h6 class="fw-bold">Jenis Paket Wisata</h6>
-                            <p id="">Paket Wisata 1 Hari</p>
+                            <p id="dtitle"></p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Destinasi Paket Wisata</h6>
-                            <p id="">Bromo</p>
+                            <p id="ddestination">Bromo</p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Harga Paket Wisata</h6>
-                            <p id="">Bromo</p>
+                            <p id="dprice">Bromo</p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Deskripsi Paket Wisata</h6>
-                            <p id="">Bromo</p>
+                            <p id="ddesc">Bromo</p>
                         </div>
-                        {{-- <div class="form-group">
-                            <h6 class="fw-bold">Nomor Whatsapp CS/ Admin</h6>
-                            <p id="">628572918901</p>
-                        </div>
-                        <div class="form-group">
-                            <h6 class="fw-bold">Isi Pesan Teks Pesanan</h6>
-                            <p id="">Saya berminat dengan paket wisata Bromo Midnight 1 Day Atas nama: Tanggal berangkat: Bulan:</p>
-                        </div> --}}
                         <div class="form-group">
                             <h6 class="fw-bold">Foto Paket wisata</h6>
                             <div class="me-7 mb-4 text-center">
                                 <div class="">
-                                    <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                    <img alt="image" id="dimg" src="" style="max-width: 430px; min-width:300px;" />
                                 </div>
                             </div>
                         </div>
@@ -302,4 +290,43 @@
             document.getElementById("prevEdit").src = oFREvent.target.result;
         };
     };
+
+    $(".btn-detail").on("click", function(){
+        let id = $(this).data('id');
+        let title = $(this).data('title');
+        let desti = $(this).data('destination');
+        let price = $(this).data('price');
+        let desc = $(this).data('desc');
+        let img = $(this).data('img');
+
+        $('#dtitle').html(title)
+        $('#ddestination').html(`${desti}`)
+        $('#dprice').html(price)
+        $('#ddesc').html(desc)
+        $('#dimg').attr('src', '{{ asset("storage") }}/' + img);
+    });
+
+    $(".btn-edit").on("click", function(){
+        let id = $(this).data('id');
+        let title = $(this).data('title');
+        let desti = $(this).data('destination');
+        let price = $(this).data('price');
+        let desc = $(this).data('desc');
+        let img = $(this).data('img');
+
+        $('#etitle').val(title)
+        $('#edestination').val(`${desti}`)
+        $('#eprice').val(price)
+        $('#edesc').html(desc)
+        $('#prevEdit').attr('src', '{{ asset("storage") }}/' + img);
+        $('#mdl_edit_id').val(id);
+        $('#form-edit').attr('action', '/admin/tour/' + id);
+    });
+
+    $(".btn-delete").on("click", function(){
+        let id = $(this).data('id');
+
+        $('#mdl_delete_id').val(id);
+        $('#form-delete').attr('action', '/admin/tour/' + id);
+    });
 </script>

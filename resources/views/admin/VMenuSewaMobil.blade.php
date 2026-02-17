@@ -63,9 +63,9 @@
                                                             <td>Rp {{ number_format($row->r_price, 0, ',', '.') }}</td>
                                                             <td>{{ $row->r_desc }}</td>
                                                             <td>
-                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_detail" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Detail Harga Sewa Mobil !" data-bs-original-title="Detail">
+                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-note="{{ $row->r_note }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_detail" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Detail Harga Sewa Mobil !" data-bs-original-title="Detail">
                                                                     <i class="fe fe-info"></i></a>
-                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_edit" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil" data-bs-original-title="Edit">
+                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-note="{{ $row->r_note }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_edit" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil" data-bs-original-title="Edit">
                                                                     <i class="fe fe-edit"></i></a>
                                                                 <a href="#" class="btn btn-icon btn-danger me-2 my-2 btn-delete" data-id="{{ $row->r_id }}" data-bs-target="#mdl_delete" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Hapus Harga Sewa Mobil" data-bs-original-title="Hapus">
                                                                     <i class="fe fe-trash"></i>
@@ -115,29 +115,26 @@
                         <form action="{{ url('admin/rentcar') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="aname_mobil">Nama Mobil</label>
+                                <label for="aname_mobil">Nama Mobil <span style="color:#c30010">*</span></label>
                                 <input name="r_car_name" type="text" class="form-control" id="aname_mobil"
                                     placeholder="Masukan Nama Mobil !" required>
                             </div>
                             <div class="form-group">
-                                <label for="aharga_mobil">Harga Mobil</label>
+                                <label for="aharga_mobil">Harga Mobil <span style="color:#c30010">*</span></label>
                                 <input name="r_price" type="number" class="form-control" id="aharga_mobil"
                                     placeholder="Masukan Harga Mobil !" required>
                             </div>
                             <div class="form-group">
-                                <label for="adeskripsi">Deskripsi</label>
-                                <textarea name="r_desc" class="form-control mb-4" id="adeskripsi" placeholder="Masukan Deskripsi !" rows="3" required></textarea>
+                                <label for="adesc">Deskripsi <span style="color:#c30010">*</span></label>
+                                <textarea name="r_desc" class="form-control mb-4" id="adesc" placeholder="Masukan Deskripsi !" rows="3" required></textarea>
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="no_wa">Nomor Whatsapp</label>
-                                <input type="text" class="form-control" id="no_wa" placeholder="Masukan Nomor Whatsapp CS !">
+
+                            <div class="form-group">
+                                <label for="anote">Note</label>
+                                <textarea name="r_note" class="form-control mb-4" id="anote" placeholder="Masukan Note" rows="3"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="pesan_wa">Teks Pesan Whatsapp</label>
-                                <textarea class="form-control mb-4" id="pesan_wa" placeholder="Masukan Teks Pesan Whatsapp !" rows="3"></textarea>
-                            </div> --}}
-                            <div class="form-group">
-                                <label for="formFile" class="form-label">Unggah Foto Mobil </label>
+                                <label for="formFile" class="form-label">Unggah Foto Mobil <span style="color:#c30010">*</span></label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt=""
                                     style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
                                 <input type="file" name="r_img" class="form-control file-input" id="addImg"
@@ -166,25 +163,21 @@
                         <form id="form-edit" action="" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="ename_mobil">Nama Mobil</label>
+                                <label for="ename_mobil">Nama Mobil <span style="color:#c30010">*</span></label>
                                 <input type="text" name="r_car_name" class="form-control" id="ename" name="">
                             </div>
                             <div class="form-group">
-                                <label for="eharga_mobil">Harga Mobil</label>
+                                <label for="eharga_mobil">Harga Mobil <span style="color:#c30010">*</span></label>
                                 <input type="text" name="r_price" class="form-control" id="eprice" name="">
                             </div>
                             <div class="form-group">
-                                <label for="edeskripsi">Deskripsi</label>
+                                <label for="edeskripsi">Deskripsi <span style="color:#c30010">*</span></label>
                                 <textarea name="r_desc" class="form-control mb-4" id="edesc" rows="3" name=""></textarea>
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="no_wa">Nomor Whatsapp</label>
-                                <input type="text" class="form-control" id="no_wa">
-                            </div>
                             <div class="form-group">
-                                <label for="pesan_wa">Teks Pesan Whatsapp</label>
-                                <textarea class="form-control mb-4" id="pesan_wa" rows="3"></textarea>
-                            </div> --}}
+                                <label for="enote">Note</label>
+                                <textarea name="r_note" class="form-control mb-4" id="enote" rows="3" name=""></textarea>
+                            </div>
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
                                 <div class="text-center">
@@ -255,6 +248,10 @@
                                 <p id="ddesc"></p>
                             </div>
                             <div class="form-group">
+                                <h6 class="fw-bold">Note</h6>
+                                <p id="dnote"></p>
+                            </div>
+                            <div class="form-group">
                                 <h6 class="fw-bold">Foto Mobil</h6>
                                 <div class="me-7 mb-4 text-center">
                                     <div class="">
@@ -300,11 +297,13 @@
         let name = $(this).data('car');
         let price = $(this).data('price');
         let desc = $(this).data('desc');
+        let note = $(this).data('note');
         let img = $(this).data('img');
 
         $('#dname').html(name)
         $('#dprice').html(`Rp${price}`)
         $('#ddesc').html(desc)
+        $('#dnote').html(note)
         $('#dimg').attr('src', '{{ asset("storage") }}/' + img);
     });
 
@@ -313,11 +312,13 @@
         let name = $(this).data('car');
         let price = $(this).data('price');
         let desc = $(this).data('desc');
+        let note = $(this).data('note');
         let img = $(this).data('img');
 
         $('#ename').val(name)
         $('#eprice').val(`${price}`)
         $('#edesc').html(desc)
+        $('#enote').html(note)
         $('#prevEdit').attr('src', '{{ asset("storage") }}/' + img);
         $('#mdl_edit_id').val(id);
         $('#form-edit').attr('action', '/admin/rentcar/' + id);

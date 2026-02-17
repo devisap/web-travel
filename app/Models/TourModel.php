@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RentcarModel extends Model
+class TourModel extends Model
 {
     use HasFactory;
     // Nama tabel
-    protected $table = 'rentcar';
+    protected $table = 'tour';
 
     // Primary key
-    protected $primaryKey = 'r_id';
+    protected $primaryKey = 't_id';
 
     // Auto increment
     public $incrementing = true;
@@ -25,15 +25,15 @@ class RentcarModel extends Model
 
     // Kolom yang bisa diisi
     protected $fillable = [
-        'r_car_name',
-        'r_price',
-        'r_desc',
-        'r_note',
-        'r_img',
+        't_title',
+        't_destination',
+        't_price',
+        't_desc',
+        't_img',
     ];
 
     // Casting tipe data
     protected $casts = [
-        'r_price' => 'integer', // BIGINT (int8) di PostgreSQL
+        't_price' => 'integer', // BIGINT (int8) di PostgreSQL
     ];
 }

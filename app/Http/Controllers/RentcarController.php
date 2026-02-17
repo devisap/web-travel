@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\RentcarModel;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
 class RentcarController extends Controller
 {
     public function index()
@@ -24,10 +22,19 @@ class RentcarController extends Controller
             'r_car_name' => 'required',
             'r_price'    => 'required|numeric',
             'r_desc'     => 'nullable',
+            'r_note'     => 'nullable',
             'r_img'      => 'required|image|max:2048'
         ]);
 
         $imgPath = $request->file('r_img')->store('rentcar', 'public');
+
+        RentcarModel::create([
+            'r_car_name' => $request->r_car_name,
+            'r_price'    => $request->r_price,
+            'r_desc'     => $request->r_desc,
+            'r_note'     => $request->r_note,
+            'r_img'      => $imgPath,
+        ]);
 
         return redirect()
             ->route('rentcar.index')
@@ -51,6 +58,7 @@ class RentcarController extends Controller
             'r_car_name' => $request->r_car_name,
             'r_price'    => $request->r_price,
             'r_desc'     => $request->r_desc,
+            'r_note' => $request->r_note,
         ]);
 
         return redirect()

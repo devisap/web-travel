@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RentcarController;
+use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 /*
@@ -44,6 +45,14 @@ Route::prefix('admin')->group(function () {
     Route::get('/rentcar/{id}', [RentcarController::class, 'show'])->name('rentcar.show');
     Route::post('/rentcar/{id}', [RentcarController::class, 'update'])->name('rentcar.update');
     Route::delete('/rentcar/{id}', [RentcarController::class, 'destroy'])->name('rentcar.destroy');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/tour', [TourController::class, 'index'])->name('tour.index');
+    Route::post('/tour', [TourController::class, 'store'])->name('tour.store');
+    Route::get('/tour/{id}', [TourController::class, 'show'])->name('tour.show');
+    Route::post('/tour/{id}', [TourController::class, 'update'])->name('tour.update');
+    Route::delete('/tour/{id}', [TourController::class, 'destroy'])->name('tour.destroy');
 });
 
 // user 

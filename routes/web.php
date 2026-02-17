@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdvantageController;
 use App\Http\Controllers\RentcarController;
+use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
@@ -50,6 +51,11 @@ Route::prefix('admin')->group(function () {
     Route::post('/tour', [TourController::class, 'store'])->name('tour.store');
     Route::post('/tour/{id}', [TourController::class, 'update'])->name('tour.update');
     Route::delete('/tour/{id}', [TourController::class, 'destroy'])->name('tour.destroy');
+
+    Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testimonial.index');
+    Route::post('/testimonial', [TestimonialController::class, 'store'])->name('testimonial.store');
+    Route::post('/testimonial/{id}', [TestimonialController::class, 'update'])->name('testimonial.update');
+    Route::delete('/testimonial/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
 
     Route::get('/home', [WelcomeController::class, 'VMenuHome'])->name('home.index');
     Route::post('/advantage', [AdvantageController::class, 'store'])->name('advantage.store');

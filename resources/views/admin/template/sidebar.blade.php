@@ -55,7 +55,7 @@
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-testimoni'}}">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/testimonial') }}">
                         <i class="fa fa-user-plus mr-2"></i>
                         <span class="side-menu__label">Testimoni</span>
                     </a>

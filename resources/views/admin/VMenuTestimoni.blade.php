@@ -53,23 +53,27 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @foreach ($testimonials as $i => $row)
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td><img src="{{ asset('user/images/icon.png') }}" alt="..." class="img-thumbnail"></td>
+                                                        <td>{{ $i + 1 }}</td>
+                                                        <td><img style="max-width: 200px;" src="{{ asset('storage/'.$row->te_img) }}" alt="..." class="img-thumbnail"></td>
                                                         <td>
-                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2"
+                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail"
+                                                                data-img="{{ $row->te_img }}"
                                                                 data-bs-target="#mdl_detail" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
                                                                 title="Detail Harga Sewa Testimoni !"
                                                                 data-bs-original-title="Detail">
                                                                 <i class="fe fe-info"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2"
+                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit"
+                                                                data-img="{{ $row->te_img }}" data-id="{{ $row->te_id }}"
                                                                 data-bs-target="#mdl_edit" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
                                                                 title="Edit Harga Sewa Testimoni"
                                                                 data-bs-original-title="Edit">
                                                                 <i class="fe fe-edit"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2 my-2"
+                                                            <a href="#" class="btn btn-icon btn-danger me-2 my-2 my-2 btn-delete"
+                                                                data-id="{{ $row->te_id }}"
                                                                 data-bs-target="#mdl_delete" data-bs-toggle="modal"
                                                                 href="javascript:void(0)" data-bs-toggle="tooltip"
                                                                 title="Hapus Harga Sewa Testimoni"
@@ -77,6 +81,7 @@
                                                                 <i class="fe fe-trash"></i></a>
                                                         </td>
                                                     </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -100,21 +105,22 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Testimoni </label>
                                 <img class="m-3 mx-auto" id="prevAdd" alt=""
                                     style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="addImg"
+                                <input type="file" name="te_img" class="form-control file-input" id="addImg"
                                     onchange="previewAddImg();" required />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -129,21 +135,24 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="form-edit" action="" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Edit Foto Testimoni </label>
-                                <img class="m-3 mx-auto" id="prevEdit" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="editImg"
+                                <div class="text-center">
+                                    <img class="m-3 mx-auto" id="prevEdit" alt=""
+                                        style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                </div>
+                                <input type="file" name="te_img" class="form-control file-input" id="editImg"
                                     onchange="previewEditImg();" required />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -161,8 +170,12 @@
                         <p>Apakah Anda yakin ingin menghapus data Testimoni tersebut ?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Hapus</button>
+                        <form id="form-delete" action="" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Hapus</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -181,8 +194,8 @@
                         <div class="form-group">
                             <h6 class="fw-bold">Foto Testimoni</h6>
                             <div class="me-7 mb-4 text-center">
-                                <div class="">
-                                    <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                <div class="text-center">
+                                    <img alt="image" id="dimg" src="" style="max-width: 430px; min-width:300px;" />
                                 </div>
                             </div>
                         </div>
@@ -216,4 +229,25 @@
             document.getElementById("prevEdit").src = oFREvent.target.result;
         };
     };
+
+    $(".btn-detail").on("click", function(){
+        let img = $(this).data('img');
+
+        $('#dimg').attr('src', '{{ asset("storage") }}/' + img);
+    });
+
+    $(".btn-edit").on("click", function(){
+        let id = $(this).data('id');
+        let img = $(this).data('img');
+
+        $('#prevEdit').attr('src', '{{ asset("storage") }}/' + img);
+        $('#form-edit').attr('action', '/admin/testimonial/' + id);
+    });
+
+    $(".btn-delete").on("click", function(){
+        let id = $(this).data('id');
+
+        $('#mdl_delete_id').val(id);
+        $('#form-delete').attr('action', '/admin/testimonial/' + id);
+    });
 </script>

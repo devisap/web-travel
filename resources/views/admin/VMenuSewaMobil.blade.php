@@ -15,7 +15,7 @@
         <div class="page-main">
             @include('admin.template.header')
             @include('admin.template.sidebar')
-            
+
             <!--app-content open-->
             <div class="app-content main-content mt-0">
                 <div class="side-app">
@@ -27,8 +27,9 @@
                             <div>
                                 <h1 class="page-title">Harga Sewa Mobil Premium</h1>
                             </div>
-                            <div class="ms-auto pageheader-btn">    
-                                <button type="button" class="btn btn-primary" data-bs-target="#mdl_add" data-bs-toggle="modal" href="javascript:void(0)"> <i
+                            <div class="ms-auto pageheader-btn">
+                                <button type="button" class="btn btn-primary" data-bs-target="#mdl_add"
+                                    data-bs-toggle="modal" href="javascript:void(0)"> <i
                                         class="fe fe-plus me-2"></i>Tambah Data</button>
                             </div>
                         </div>
@@ -43,7 +44,8 @@
                                     </div> --}}
                                     <div class="card-body">
                                         <div class="table-responsive">
-                                            <table id="basic-datatable" class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
+                                            <table id="basic-datatable"
+                                                class="table table-striped table-row-bordered gy-5 gs-7 border rounded">
                                                 <thead>
                                                     <tr class="text-center">
                                                         <th class="wd-15p border-bottom-0">No</th>
@@ -54,6 +56,25 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                    @foreach ($rentcars as $i => $row)
+                                                        <tr class="text-center">
+                                                            <td>{{ $i + 1 }}</td>
+                                                            <td>{{ $row->r_car_name }}</td>
+                                                            <td>Rp {{ number_format($row->r_price, 0, ',', '.') }}</td>
+                                                            <td>{{ $row->r_desc }}</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_detail" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Detail Harga Sewa Mobil !" data-bs-original-title="Detail">
+                                                                    <i class="fe fe-info"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit" data-id="{{ $row->r_id }}" data-car="{{ $row->r_car_name }}" data-price="{{ $row->r_price }}" data-desc="{{ $row->r_desc }}" data-img="{{ $row->r_img }}" data-bs-target="#mdl_edit" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Edit Harga Sewa Mobil" data-bs-original-title="Edit">
+                                                                    <i class="fe fe-edit"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-danger me-2 my-2 btn-delete" data-id="{{ $row->r_id }}" data-bs-target="#mdl_delete" data-bs-toggle="modal" href="javascript:void(0)" data-bs-toggle="tooltip" title="Hapus Harga Sewa Mobil" data-bs-original-title="Hapus">
+                                                                    <i class="fe fe-trash"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                                {{-- <tbody>
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Inova Reborn</td>
@@ -68,7 +89,7 @@
                                                             <i class="fe fe-trash"></i></a>
                                                     </td>
                                                     </tr>
-                                                </tbody>
+                                                </tbody> --}}
                                             </table>
                                         </div>
                                     </div>
@@ -87,25 +108,25 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="mdl_label">Tambah Data Harga Sewa Mobil </h5>
-                       <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                                aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form action="{{ url('admin/rentcar') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="aname_mobil">Nama Mobil</label>
-                                <input type="text" class="form-control" id="aname_mobil" placeholder="Masukan Nama Mobil !">
+                                <input name="r_car_name" type="text" class="form-control" id="aname_mobil"
+                                    placeholder="Masukan Nama Mobil !" required>
                             </div>
                             <div class="form-group">
                                 <label for="aharga_mobil">Harga Mobil</label>
-                                <input type="number" class="form-control" id="aharga_mobil" placeholder="Masukan Harga Mobil !">
+                                <input name="r_price" type="number" class="form-control" id="aharga_mobil"
+                                    placeholder="Masukan Harga Mobil !" required>
                             </div>
                             <div class="form-group">
                                 <label for="adeskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="adeskripsi" placeholder="Masukan Deskripsi !" rows="3"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="anote">Note</label>
-                                <textarea class="form-control mb-4" id="anote" placeholder="Masukan Note !" rows="3"></textarea>
+                                <textarea name="r_desc" class="form-control mb-4" id="adeskripsi" placeholder="Masukan Deskripsi !" rows="3" required></textarea>
                             </div>
                             {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
@@ -117,15 +138,17 @@
                             </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
-                                <img class="m-3 mx-auto" id="prevAdd" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="addImg" onchange="previewAddImg();" required />
+                                <img class="m-3 mx-auto" id="prevAdd" alt=""
+                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                <input type="file" name="r_img" class="form-control file-input" id="addImg"
+                                    onchange="previewAddImg();" required />
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -136,25 +159,23 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="mdl_label">Edit Data Harga Sewa Mobil </h5>
-                       <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                                aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="form-edit" action="" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="ename_mobil">Nama Mobil</label>
-                                <input type="text" class="form-control" id="ename_mobil" name="">
+                                <input type="text" name="r_car_name" class="form-control" id="ename" name="">
                             </div>
                             <div class="form-group">
                                 <label for="eharga_mobil">Harga Mobil</label>
-                                <input type="text" class="form-control" id="eharga_mobil" name=""> 
+                                <input type="text" name="r_price" class="form-control" id="eprice" name="">
                             </div>
                             <div class="form-group">
                                 <label for="edeskripsi">Deskripsi</label>
-                                <textarea class="form-control mb-4" id="edeskripsi" rows="3" name=""></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="enote">Note</label>
-                                <textarea class="form-control mb-4" id="enote" rows="3" name=""></textarea>
+                                <textarea name="r_desc" class="form-control mb-4" id="edesc" rows="3" name=""></textarea>
                             </div>
                             {{-- <div class="form-group">
                                 <label for="no_wa">Nomor Whatsapp</label>
@@ -166,16 +187,21 @@
                             </div> --}}
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
-                                <img class="m-3 mx-auto" id="prevEdit" alt="" style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input" id="editImg" onchange="previewEditImg();" required />
+                                <div class="text-center">
+                                    <img class="m-3 mx-auto" id="prevEdit" alt=""
+                                        style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                </div>
+                                <input type="file" name="r_img" class="form-control file-input" id="editImg"
+                                    onchange="previewEditImg();" />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <input type="hidden" id="mdl_edit_id">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -186,14 +212,20 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="mdl_label">Hapus Data Harga Sewa Mobil </h5>
-                       <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                                aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <p>Apakah Anda yakin ingin menghapus data harga sewa mobil tersebut ?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Hapus</button>
+                        <form id="form-delete" action="" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input type="hidden" id="mdl_delete_id">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Hapus</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -205,31 +237,29 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="mdl_label">Detail Data Harga Sewa Mobil </h5>
-                       <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                                aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
                         <div class="modal-body">
                             <div class="form-group">
                                 <h6 class="fw-bold">Nama Mobil</h6>
-                                <p id="">Inova Reborn</p>
+                                <p id="dname"></p>
                             </div>
                             <div class="form-group">
                                 <h6 class="fw-bold">Harga Mobil</h6>
-                                <p id="">Rp. 725.000</p>
+                                <p id="dprice"></p>
                             </div>
                             <div class="form-group">
                                 <h6 class="fw-bold">Deskripsi</h6>
-                                <p id="">Isi Deskripsi</p>
-                            </div>
-                            <div class="form-group">
-                                <h6 class="fw-bold">Note</h6>
-                                <p id="">Isi Deskripsi</p>
+                                <p id="ddesc"></p>
                             </div>
                             <div class="form-group">
                                 <h6 class="fw-bold">Foto Mobil</h6>
                                 <div class="me-7 mb-4 text-center">
                                     <div class="">
-                                        <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                        <img alt="image" id="dimg" src=""
+                                            style="max-width: 430px; min-width:300px;" />
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +277,7 @@
 
 </html>
 <script>
-     function previewAddImg() {
+    function previewAddImg() {
         document.getElementById("prevAdd").style.display = "block";
         var oFReader = new FileReader();
         oFReader.readAsDataURL(document.getElementById("addImg").files[0]);
@@ -256,7 +286,7 @@
         };
     };
 
-     function previewEditImg() {
+    function previewEditImg() {
         document.getElementById("prevEdit").style.display = "block";
         var oFReader = new FileReader();
         oFReader.readAsDataURL(document.getElementById("editImg").files[0]);
@@ -264,4 +294,40 @@
             document.getElementById("prevEdit").src = oFREvent.target.result;
         };
     };
+
+    $(".btn-detail").on("click", function(){
+        let id = $(this).data('id');
+        let name = $(this).data('car');
+        let price = $(this).data('price');
+        let desc = $(this).data('desc');
+        let img = $(this).data('img');
+
+        $('#dname').html(name)
+        $('#dprice').html(`Rp${price}`)
+        $('#ddesc').html(desc)
+        $('#dimg').attr('src', '{{ asset("storage") }}/' + img);
+    });
+
+    $(".btn-edit").on("click", function(){
+        let id = $(this).data('id');
+        let name = $(this).data('car');
+        let price = $(this).data('price');
+        let desc = $(this).data('desc');
+        let img = $(this).data('img');
+
+        $('#ename').val(name)
+        $('#eprice').val(`${price}`)
+        $('#edesc').html(desc)
+        $('#prevEdit').attr('src', '{{ asset("storage") }}/' + img);
+        $('#mdl_edit_id').val(id);
+        $('#form-edit').attr('action', '/admin/rentcar/' + id);
+    });
+
+    $(".btn-delete").on("click", function(){
+        let id = $(this).data('id');
+
+        $('#mdl_delete_id').val(id);
+        $('#form-delete').attr('action', '/admin/rentcar/' + id);
+    });
+    
 </script>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RentcarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 /*
@@ -36,6 +37,14 @@ Route::get('menu-artikel', [WelcomeController::class, 'VMenuArtikel']);
 Route::get('menu-home', [WelcomeController::class, 'VMenuHome']);
 Route::get('menu-testimoni', [WelcomeController::class, 'VMenuTestimoni']);
 Route::get('login', [WelcomeController::class, 'VLogin']);
+
+Route::prefix('admin')->group(function () {
+    Route::get('/rentcar', [RentcarController::class, 'index'])->name('rentcar.index');
+    Route::post('/rentcar', [RentcarController::class, 'store'])->name('rentcar.store');
+    Route::get('/rentcar/{id}', [RentcarController::class, 'show'])->name('rentcar.show');
+    Route::post('/rentcar/{id}', [RentcarController::class, 'update'])->name('rentcar.update');
+    Route::delete('/rentcar/{id}', [RentcarController::class, 'destroy'])->name('rentcar.destroy');
+});
 
 // user 
 Route::get('beranda', [WelcomeController::class, 'VBeranda']);

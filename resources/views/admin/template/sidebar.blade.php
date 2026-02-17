@@ -43,12 +43,6 @@
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-artikel'}}">
-                        <i class="fa fa-wpforms mr-2"></i>
-                        <span class="side-menu__label">Artikel</span>
-                    </a>
-                </li>
-                <li class="slide">
                     <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-tentangkami'}}">
                         <i class="fa fa-child mr-2"></i>
                         <span class="side-menu__label">Tentang Kami</span>

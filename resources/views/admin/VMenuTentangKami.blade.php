@@ -49,28 +49,29 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Ken'z Tranz adalah penyedia layanan sewa mobil (carter mobil
-                                                            / rental mobil)....</td>
-                                                        <td>Kenz Tranz adalah penyedia layanan sewa mobil (carter mobil
-                                                            / rental mobil)....</td>
-                                                        <td>Ingin pergi berwisata ke gunung bromo sendirian? atau
-                                                            rame-rame dengan teman?...</td>
-                                                        <td>
-                                                            <a href="#" class="btn btn-icon btn-primary me-2 my-2"
-                                                                data-bs-target="#mdl_detail" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Detail Harga Sewa Mobil !"
-                                                                data-bs-original-title="Detail">
-                                                                <i class="fe fe-info"></i></a>
-                                                            <a href="#" class="btn btn-icon btn-warning me-2 my-2"
-                                                                data-bs-target="#mdl_edit" data-bs-toggle="modal"
-                                                                href="javascript:void(0)" data-bs-toggle="tooltip"
-                                                                title="Edit Harga Sewa Mobil"
-                                                                data-bs-original-title="Edit">
-                                                                <i class="fe fe-edit"></i></a>
-                                                        </td>
-                                                    </tr>
+                                                    @foreach ($abouts as $i => $row)
+                                                        <tr>
+                                                            <td>{{ $row->ab_kenztrans }}</td>
+                                                            <td>{{ $row->ab_rentcar }}</td>
+                                                            <td>{{ $row->ab_tour }}</td>
+                                                            <td>
+                                                                <a href="#" class="btn btn-icon btn-primary me-2 my-2 btn-detail"
+                                                                    data-kenztrans="{{ $row->ab_kenztrans }}" data-rentcar="{{ $row->ab_rentcar }}" data-rentcarimg="{{ $row->ab_rentcar_img }}" data-tour="{{ $row->ab_tour }}" data-tourimg="{{ $row->ab_tour_img }}"
+                                                                    data-bs-target="#mdl_detail" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Detail Harga Sewa Mobil !"
+                                                                    data-bs-original-title="Detail">
+                                                                    <i class="fe fe-info"></i></a>
+                                                                <a href="#" class="btn btn-icon btn-warning me-2 my-2 btn-edit"
+                                                                    data-id="{{ $row->ab_id }}" data-kenztrans="{{ $row->ab_kenztrans }}" data-rentcar="{{ $row->ab_rentcar }}" data-rentcarimg="{{ $row->ab_rentcar_img }}" data-tour="{{ $row->ab_tour }}" data-tourimg="{{ $row->ab_tour_img }}"
+                                                                    data-bs-target="#mdl_edit" data-bs-toggle="modal"
+                                                                    href="javascript:void(0)" data-bs-toggle="tooltip"
+                                                                    title="Edit Harga Sewa Mobil"
+                                                                    data-bs-original-title="Edit">
+                                                                    <i class="fe fe-edit"></i></a>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
@@ -94,41 +95,46 @@
                                 aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
+                        <form id="form-edit" action="" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="form-group">
                                 <label for="tentang_kenz">Tentang Kenz Tranz</label>
-                                <textarea class="form-control mb-4 tinyMce" id="tentang_kenz" rows="4">Ken'z Tranz adalah penyedia layanan sewa mobil (carter mobil / rental mobil) LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil yang di sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat menampung banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift dan Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket wisata. Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu hari, dua hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di rekomendasikan seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata Kawah Ijen Banyuwangi, anda juga dapat memilih tujuan wisata sesuai dengan keinginan anda. Malang Army Trans memberikan anda kemudahan dalam melakukan pemesanan kendaraan/paket wisata, sehingga perjalanan yang akan anda tempuh dapat sesuai dengan yang direncanakan.</textarea>
+                                <textarea class="form-control mb-4 tinyMce" name="ab_kenztrans" id="ekenz" rows="4">{{ $abouts[0]->ab_kenztrans }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="tentang_mobil">Tentang Sewa Mobil</label>
-                                <textarea class="form-control mb-4 tinyMce" id="tentang_mobil" rows="3"></textarea>
+                                <textarea class="form-control mb-4 tinyMce" name="ab_rentcar" id="erentcar" rows="3">{{ $abouts[0]->ab_rentcar }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Mobil </label>
-                                <img class="m-3 mx-auto" id="prevAddMobil" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input"
-                                    id="addImgMobil" onchange="previewAddImgMobil();" required />
+                                <div class="text-center">
+                                    <img class="m-3 mx-auto" id="erentcarimg" alt=""
+                                        style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                </div>
+                                <input type="file" name="ab_rentcar_img" class="form-control file-input"
+                                    id="addImgMobil" onchange="previewAddImgMobil();" />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
                             <div class="form-group">
                                 <label for="tentang_paket">Tentang Paket Wisata</label>
-                                <textarea class="form-control mb-4 tox-target tinyMce" id="tentang_paket" rows="3"></textarea>
+                                <textarea class="form-control mb-4 tox-target tinyMce" id="etour" name="ab_tour" rows="3">{{ $abouts[0]->ab_tour }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="formFile" class="form-label">Unggah Foto Paket Wisata</label>
-                                <img class="m-3 mx-auto" id="prevAddPaket" alt=""
-                                    style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
-                                <input type="file" name="file" class="form-control file-input"
-                                    id="addImgPaket" onchange="previewAddImgPaket();" required />
+                                <div class="text-center">
+                                    <img class="m-3 mx-auto" id="etourimg" alt=""
+                                        style="max-width: 450px; min-width: 250px; max-height: 450px; min-height: 250;" />
+                                </div>
+                                <input type="file" name="ab_tour_img" class="form-control file-input"
+                                    id="addImgPaket" onchange="previewAddImgPaket();" />
                                 {{-- <input class="form-control file-input" type="file" id="formFile"> --}}
                             </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                        <button type="button" class="btn btn-primary">Simpan</button>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -145,29 +151,29 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <h6 class="fw-bold">Tentang Kenz Tranz</h6>
-                            <p id="">Ken'z Tranz adalah penyedia layanan sewa mobil (carter mobil / rental mobil) LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil yang di sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat menampung banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift dan Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket wisata. Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu hari, dua hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di rekomendasikan seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata Kawah Ijen Banyuwangi, anda juga dapat memilih tujuan wisata sesuai dengan keinginan anda. Malang Army Trans memberikan anda kemudahan dalam melakukan pemesanan kendaraan/paket wisata, sehingga perjalanan yang akan anda tempuh dapat sesuai dengan yang direncanakan.</p>
+                            <p id="dkenz"></p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Tentang Sewa Mobil</h6>
-                            <p id="">Ken'z Tranz adalah penyedia layanan sewa mobil (carter mobil / rental mobil) LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil yang di sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat menampung banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift dan Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket wisata. Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu hari, dua hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di rekomendasikan seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata Kawah Ijen Banyuwangi, anda juga dapat memilih tujuan wisata sesuai dengan keinginan anda. Malang Army Trans memberikan anda kemudahan dalam melakukan pemesanan kendaraan/paket wisata, sehingga perjalanan yang akan anda tempuh dapat sesuai dengan yang direncanakan.</p>
+                            <p id="drentcar"></p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Gambar</h6>
                             <div class="me-7 mb-4 text-center">
                                 <div class="">
-                                    <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                    <img alt="image" id="drentcarimg" src="" style="max-width: 430px; min-width:300px;" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Tentang Paket Wisata</h6>
-                            <p id="">Ken'z Tranz adalah penyedia layanan sewa mobil (carter mobil / rental mobil) LUXURY DAN PREMIUM CAR yang terletak di Malang, Jawa Timur. Beragam jenis mobil yang di sewakan dari mobil dengan kapasitas penumpang sedikit hingga mobil yang dapat menampung banyak penumpang seperti sewa mobil Toyota HiAce Premio,Inovva reborn facelift dan Toyota Alpahard . Selain itu Malang Army Trans juga menyediakan beragam paket wisata. Paket wisata yang ditawarkan juga tidak kalah beragam, dari paket wisata satu hari, dua hari satu malam, hingga tiga hari dua malam. Selain tujuan wisata yang di rekomendasikan seperti paket wisata Malang / Batu, paket wisata Bromo dan paket wisata Kawah Ijen Banyuwangi, anda juga dapat memilih tujuan wisata sesuai dengan keinginan anda. Malang Army Trans memberikan anda kemudahan dalam melakukan pemesanan kendaraan/paket wisata, sehingga perjalanan yang akan anda tempuh dapat sesuai dengan yang direncanakan.</p>
+                            <p id="dtour"></p>
                         </div>
                         <div class="form-group">
                             <h6 class="fw-bold">Gambar</h6>
                             <div class="me-7 mb-4 text-center">
                                 <div class="">
-                                    <img alt="image" id="" src="{{ asset('user/images/icon.png') }}" style="max-width: 430px; min-width:300px;" />
+                                    <img alt="image" id="dtourimg" src="" style="max-width: 430px; min-width:300px;" />
                                 </div>
                             </div>
                         </div>
@@ -227,5 +233,36 @@
         if (e.target.closest(".tox-tinymce-aux, .moxman-window, .tam-assetmanager-root") !== null) {
             e.stopImmediatePropagation();
         }
+    });
+
+    $(".btn-detail").on("click", function(){
+        let id = $(this).data('id');
+        let kenz = $(this).data('kenztrans');
+        let rentcar = $(this).data('rentcar');
+        let rentcarimg = $(this).data('rentcarimg');
+        let tour = $(this).data('tour');
+        let tourimg = $(this).data('tourimg');
+
+        $('#dkenz').html(kenz)
+        $('#drentcar').html(rentcar)
+        $('#drentcarimg').attr('src', '{{ asset("storage") }}/' + rentcarimg);
+        $('#dtour').html(tour)
+        $('#dtourimg').attr('src', '{{ asset("storage") }}/' + tourimg);
+    });
+
+    $(".btn-edit").on("click", function(){
+        let id = $(this).data('id');
+        let kenz = $(this).data('kenztrans');
+        let rentcar = $(this).data('rentcar');
+        let rentcarimg = $(this).data('rentcarimg');
+        let tour = $(this).data('tour');
+        let tourimg = $(this).data('tourimg');
+
+        $('#ekenz').val(kenz)
+        $('#erentcar').val(rentcar)
+        $('#erentcarimg').attr('src', '{{ asset("storage") }}/' + rentcarimg);
+        $('#etour').val(tour)
+        $('#etourimg').attr('src', '{{ asset("storage") }}/' + tourimg);
+        $('#form-edit').attr('action', '/admin/about/' + id);
     });
 </script>

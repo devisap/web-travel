@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <li class="slide">
-                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{'menu-tentangkami'}}">
+                    <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/about') }}">
                         <i class="fa fa-child mr-2"></i>
                         <span class="side-menu__label">Tentang Kami</span>
                     </a>

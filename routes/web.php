@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AdvantageController;
 use App\Http\Controllers\RentcarController;
 use App\Http\Controllers\TestimonialController;
@@ -56,6 +57,9 @@ Route::prefix('admin')->group(function () {
     Route::post('/testimonial', [TestimonialController::class, 'store'])->name('testimonial.store');
     Route::post('/testimonial/{id}', [TestimonialController::class, 'update'])->name('testimonial.update');
     Route::delete('/testimonial/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
+    
+    Route::get('/about', [AboutUsController::class, 'index'])->name('about.index');
+    Route::post('/about/{id}', [AboutUsController::class, 'update'])->name('about.update');
 
     Route::get('/home', [WelcomeController::class, 'VMenuHome'])->name('home.index');
     Route::post('/advantage', [AdvantageController::class, 'store'])->name('advantage.store');
